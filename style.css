@@ -1,0 +1,1174 @@
+/* Inter Font Declaration */
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+:root {
+  --neon-blue: #77d5ed;
+  --neon-pink: #ffcce7;
+  --neon-yellow: #dcf6e6;
+  --pearly-white: #d7f0f7;
+  --bg-dark: #0E244D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--pearly-white);
+  overflow-x: hidden;
+  line-height: 1.5;
+  background-image: 
+    linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Explicit Inter Font enforcement for all paragraph elements */
+p, .cyber-text, .card-desc {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Squishy Button Effects */
+.nav-btn,
+.neon-btn,
+.carousel-nav-btn,
+.arrow,
+a.giant-name {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              background-color 0.25s ease, 
+              color 0.25s ease, 
+              box-shadow 0.25s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-btn:active,
+.neon-btn:active,
+.carousel-nav-btn:active,
+.arrow:active {
+  transform: scale(0.92) !important;
+  transition: transform 0.08s ease-out !important;
+}
+
+/* Header Giant Static Name */
+.header-container {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.giant-name {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--pearly-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  position: relative;
+  display: inline-block;
+  -webkit-text-stroke: 2px var(--pearly-white);
+}
+
+.giant-name:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--neon-blue);
+  text-shadow: 
+    4px 4px 0 var(--neon-pink),
+    -4px -4px 0 var(--neon-yellow);
+  transform: scale(1.05);
+}
+
+/* Interactive Nav */
+.y2k-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  perspective: 1000px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+  padding: 12px 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover, .nav-btn.active {
+  background: var(--neon-blue);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--neon-blue);
+  transform: scale(1.08) rotateZ(-2deg);
+}
+
+/* Fisheye / 3D Layout */
+.fisheye-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem 2rem;
+  perspective: 1200px;
+}
+
+.tab-content {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  transform-style: preserve-3d;
+}
+
+.tab-content.active {
+  display: grid;
+  animation: popInFisheye 0.4s ease-out forwards;
+}
+
+/* Clean Pop-in Animation that preserves 3D Carousel perspective */
+@keyframes popInFisheye {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.96); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+/* Y2K Cards */
+.y2k-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 4px solid var(--neon-pink);
+  border-left: 4px solid var(--neon-pink);
+  padding: 2.5rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.y2k-card:hover {
+  transform: translateY(-8px) rotateY(3deg) rotateX(3deg);
+  box-shadow: 
+    -10px 10px 0 rgba(255, 0, 153, 0.4),
+    -20px 20px 0 rgba(0, 229, 255, 0.25);
+  z-index: 5;
+}
+
+.full-width-card {
+  grid-column: 1 / -1;
+}
+
+.outline-card {
+  background: transparent;
+  border: 2px dashed var(--neon-yellow);
+}
+
+.outline-card:hover {
+  box-shadow: 0 0 20px rgba(220, 246, 230, 0.3);
+}
+
+/* Floating Game Badges */
+.floating-badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  padding: 5px 15px;
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--bg-dark);
+  box-shadow: 4px 4px 0 var(--bg-dark);
+  transform: rotate(5deg);
+  animation: floatBadge 3s ease-in-out infinite alternate;
+  z-index: 20;
+}
+
+.blue-badge { background: var(--neon-blue); }
+.pink-badge { background: var(--neon-pink); }
+.yellow-badge { background: var(--neon-yellow); }
+
+@keyframes floatBadge {
+  0% { transform: translateY(0) rotate(5deg); }
+  100% { transform: translateY(-10px) rotate(8deg); }
+}
+
+/* Typography */
+.cyber-title {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: var(--pearly-white);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.cyber-subtitle {
+  font-size: 1.15rem;
+  color: var(--neon-yellow);
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cyber-text {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.center-title { text-align: center; }
+.center-sub { text-align: center; margin-bottom: 2rem; }
+
+/* Clean Borderless Card Images */
+.image-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.clean-card-img {
+  width: 100%;
+  max-width: 48%;
+  object-fit: cover;
+  border: none !important;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.clean-card-img:hover {
+  transform: scale(1.04);
+}
+
+/* Logo Highlights */
+.logo-bg-green {
+  background: rgba(220, 246, 230, 0.88);
+  border: 1px solid rgba(220, 246, 230, 0.5);
+  padding: 8px 16px 8px 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-bg-blue {
+  background: rgba(168, 197, 235, 0.9) !important;
+  border: 1px solid #77d5ed;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Brand Logos & Cards */
+.brand-image-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 1.2rem 0;
+  flex-wrap: wrap;
+}
+
+.center-brand-row {
+  justify-content: center;
+}
+
+.brand-logo-wide {
+  max-height: 45px;
+  object-fit: contain;
+}
+
+.brand-mascot {
+  max-height: 140px;
+  object-fit: contain;
+}
+
+/* Verses & Vibes Logo specific styling */
+.verses-vibes-logo {
+  margin-left: 3rem !important;
+  margin-right: 1rem !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+.mini-banner {
+  max-height: 190px;
+  border-radius: 4px;
+  margin-left: 5rem;
+  justify-content: center;
+}
+
+.card-media-preview {
+  margin-top: 1rem;
+}
+
+.card-full-thumb {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border: none !important;
+  border-radius: 8px;
+}
+
+/* Video Player without Overlay Controls */
+.card-video-player {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border: none !important;
+  border-radius: 8px;
+  opacity: 1 !important;
+  pointer-events: none;
+  display: block;
+}
+
+.card-btn-row {
+  margin-top: 1.2rem;
+  display: flex;
+  width: 100%;
+}
+
+.center-btn-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-align: center;
+}
+
+.center-btn-row .neon-btn {
+  margin: 0 auto !important;
+}
+
+/* Buttons */
+.neon-btn {
+  display: inline-block;
+  background: var(--neon-pink);
+  color: var(--bg-dark);
+  padding: 12px 24px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  cursor: pointer;
+  border: none;
+}
+
+.neon-btn:hover {
+  background: var(--pearly-white);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px var(--neon-pink);
+}
+
+/* Gentler / Less Steep Figma Button */
+.gentle-btn {
+  clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%) !important;
+  padding: 10px 20px;
+}
+
+/* Centered Button Helper */
+.center-btn {
+  display: block !important;
+  margin: 1.5rem auto 0 auto !important;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Skills Grid */
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Certifications List */
+.cert-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.cert-list li {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: var(--pearly-white);
+}
+
+/* Fully Responsive Design Preview Grid */
+.design-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.design-preview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.design-logo {
+  max-height: 35px;
+  object-fit: contain;
+}
+
+.design-thumb {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: none !important;
+}
+
+/* TechMeKid Scroll Container Matching Full MCA Height */
+.tmk-scroll-container {
+  height: 280px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  width: 100%;
+}
+
+.tmk-scroll-container .tmk-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+/* Canva Gallery Layout & Larger Posters */
+/* Canva Gallery Layout & Larger Posters (Desktop Grid - 2 per row) */
+.canva-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Exactly 2 designs per row on Desktop */
+  gap: 1.8rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.canva-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.canva-poster {
+  width: 100%;
+  height: 380px; /* Rectangular height display */
+  object-fit: contain; /* Preserves exact rectangular aspect ratio without cropping */
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: none !important;
+  transition: transform 0.3s ease;
+}
+
+.canva-poster:hover {
+  transform: scale(1.02);
+}
+
+/* Instagram Photography Slider */
+.sliderContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: none !important;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.slider img:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  background: var(--neon-blue);
+  color: var(--bg-dark);
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 900;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 12px;
+  clip-path: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  pointer-events: auto;
+}
+
+.arrow.left { margin-right: 12px; }
+.arrow.right { margin-left: 12px; }
+
+/* Marcus High School Card Header Flex */
+.hs-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marcus-hs-logo {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  border: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dynamic 3D Spinning Cylinder Carousel (Desktop)
+   -------------------------------------------------------------------------- */
+.carousel-section-card {
+  perspective: 1200px;
+  overflow: hidden;
+  padding: 2.5rem 1rem;
+}
+
+.carousel-3d-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel-3d-stage {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.carousel-3d-cylinder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.carousel-card-3d {
+  position: absolute;
+  width: 290px;
+  height: 400px;
+  left: 5px;
+  top: 0;
+  background: rgba(14, 36, 77, 0.95);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.3s ease;
+}
+
+.card-blue-border {
+  border: 2px solid var(--neon-blue) !important;
+  box-shadow: 0 0 20px rgba(119, 213, 237, 0.3);
+}
+
+.card-pink-border {
+  border: 2px solid var(--neon-pink) !important;
+  box-shadow: 0 0 20px rgba(255, 204, 231, 0.25);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--bg-dark);
+  background: var(--neon-yellow);
+  padding: 3px 10px;
+  align-self: flex-start;
+  border-radius: 4px;
+}
+
+.card-head {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--pearly-white);
+  margin-top: 0.4rem;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #dddddd;
+  line-height: 1.35;
+  margin: 0.4rem 0;
+}
+
+.card-img-placeholder {
+  width: 100%;
+  height: 120px;
+  border: 1px dashed var(--neon-blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none !important;
+}
+
+.hs-badge-placeholder {
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: var(--neon-pink);
+  letter-spacing: 1px;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--neon-pink);
+  color: var(--bg-dark);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 900;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  pointer-events: auto;
+  box-shadow: 0 0 15px rgba(255, 204, 231, 0.5);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* CodeGana Terminal Custom Container */
+.codegana-terminal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.codegana-term-img {
+  max-height: 55px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+.codegana-term-mascot {
+  max-height: 85px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* Single Photo Terminal Modal View */
+.single-terminal-photo {
+  max-width: 100% !important;
+  max-height: 60vh !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+  border: 2px solid var(--neon-blue) !important;
+  margin: 0.5rem auto !important;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   macOS Interactive Terminal Modal
+   -------------------------------------------------------------------------- */
+.mac-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 20, 45, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  padding: 1.5rem;
+}
+
+.mac-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mac-terminal-window {
+  width: 100%;
+  max-width: 920px;
+  max-height: 85vh;
+  background: #0b1936;
+  border: 1px solid rgba(119, 213, 237, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(119, 213, 237, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.85) translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mac-modal-overlay.active .mac-terminal-window {
+  transform: scale(1) translateY(0);
+}
+
+.mac-terminal-header {
+  background: #132a54;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(119, 213, 237, 0.2);
+  user-select: none;
+}
+
+.mac-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mac-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.mac-red-dot {
+  background: #ff5f56;
+  border: 2px solid #ff3b30 !important;
+}
+
+.mac-red-dot:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 10px #ff3b30;
+}
+
+.mac-red-dot.squish-btn {
+  transform: scale(0.8) !important;
+}
+
+.mac-yellow-dot { background: #ffbd2e; border: 1px solid #e09e1b; }
+.mac-green-dot { background: #27c93f; border: 1px solid #1aab29; }
+
+.mac-terminal-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  color: var(--neon-blue);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+}
+
+.mac-terminal-body {
+  padding: 2.2rem;
+  overflow-y: auto;
+  color: var(--pearly-white);
+}
+
+.mac-terminal-body .floating-badge {
+  display: none !important;
+}
+
+.mac-terminal-body .design-logo {
+  max-height: 25px !important;
+  width: auto !important;
+}
+
+.mac-terminal-body img {
+  max-width: 100% !important;
+  max-height: 480px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: none !important;
+}
+
+.mac-terminal-body .mini-banner {
+  max-height: 330px !important;
+}
+
+.mac-terminal-body .codegana-term-mascot {
+  max-height: 230px !important;
+}
+
+/* Verses & Vibes Logo specific styling ON TERMINAL ONLY */
+#macModalContent .verses-vibes-logo {
+  max-width: 60% !important;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}
+
+/* FLINT video player full uncropped height in terminal */
+#macModalContent .flint-video-player,
+#macModalContent .card-video-player,
+#macModalContent video {
+  max-width: 100% !important;
+  max-height: 70vh !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.mac-terminal-body .image-row,
+.mac-terminal-body .brand-image-row,
+.mac-terminal-body .canva-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.mac-terminal-red-line {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Responsive Component Design Overrides
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .giant-name { font-size: 3.2rem; }
+  
+  /* Fix Floating Badges Clipping on Mobile */
+  .y2k-card { 
+    padding: 1.25rem !important; 
+    width: 100% !important; 
+    max-width: 100% !important; 
+    box-sizing: border-box !important; 
+    overflow: visible !important; /* Prevents badges from clipping */
+    margin-top: 30px !important; /* Sufficient space for top badge */
+  }
+
+  .floating-badge {
+    top: -14px !important;
+    right: 10px !important;
+    font-size: 0.85rem !important;
+    padding: 4px 12px !important;
+  }
+
+  .nav-btn { padding: 10px 18px; font-size: 1rem; }
+  
+  /* Fisheye Container Mobile Padding & Alignment */
+  .fisheye-container {
+    padding: 0 12px 3rem 12px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .tab-content {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    width: 100% !important;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Increase Size of ALL Pink Buttons on Mobile Only */
+  .neon-btn {
+    padding: 20px 36px !important;
+    font-size: 1.4rem !important;
+    letter-spacing: 2px !important;
+  }
+
+  .carousel-nav-btn {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.8rem !important;
+  }
+
+  /* Enlarged Red Button and Red Thick Line for Mobile Terminal */
+  .mac-red-dot {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .mac-terminal-window {
+    max-height: 75vh !important;
+  }
+
+  .mac-terminal-red-line {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px !important;
+    background-color: #ff3b30;
+    border-top: 8px solid #cc2d24 !important;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.1rem !important;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    user-select: none;
+    box-shadow: 0 -2px 10px rgba(255, 59, 48, 0.4);
+  }
+
+  /* Verses & Vibes Mobile Card Spacing & Wider Banner */
+  .brand-image-row.verses-vibes-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.2rem !important;
+    width: 100% !important;
+    margin: 1.2rem 0 !important;
+  }
+
+  .verses-vibes-logo {
+    max-width: 150px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+  }
+
+  .mini-banner {
+    max-width: 320px !important; /* Increased width on mobile */
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+    border-radius: 6px !important;
+  }
+
+  /* Figma Prototyping Card & Canva Designs Card Mobile Viewport Fit */
+  .design-preview-grid, .canva-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .design-preview-item, .canva-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .design-thumb, .tmk-scroll-container, .canva-poster {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Instagram Photography Mobile Single-Image Carousel & Larger Blue Arrows */
+  .sliderContainer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    gap: 10px !important;
+    margin-top: 1rem !important;
+  }
+
+  .slider {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    width: auto !important;
+    padding: 0 !important;
+    height: 220px !important;
+  }
+
+  .slider img {
+    width: 100% !important;
+    max-width: 200px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+  }
+
+  /* Increased Size of Blue Arrow Buttons for Instagram Photography on Mobile */
+  .arrow {
+    padding: 14px 20px !important;
+    font-size: 1.8rem !important;
+    border-radius: 12px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+  }
+
+  .arrow.left { margin-right: 0 !important; }
+  .arrow.right { margin-left: 0 !important; }
+
+  /* Marcus High School Card Header Flex & Centered Logo + 50% Size Increase */
+  .hs-header-flex { 
+    flex-direction: column !important; 
+    align-items: center !important; 
+    text-align: center !important;
+  }
+  
+  .marcus-hs-logo { 
+    max-width: 180px !important; /* Increased size by 50% */
+    width: 100% !important;
+    margin: 1rem auto 0 auto !important; 
+    display: block !important;
+  }
+
+  /* Mobile Single Card Carousel with No Arrow Overlap */
+  .carousel-section-card {
+    padding: 1.5rem 0.5rem !important;
+  }
+
+  .carousel-3d-wrapper {
+    height: 440px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    touch-action: pan-y !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .carousel-3d-stage {
+    width: 100% !important;
+    height: 100% !important;
+    perspective: none !important;
+    position: relative !important;
+  }
+
+  .carousel-3d-cylinder {
+    width: 100% !important;
+    height: 100% !important;
+    transform-style: flat !important;
+    transform: none !important;
+    position: relative !important;
+  }
+
+  .carousel-card-3d {
+    position: absolute !important;
+    top: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 90px) !important;
+    max-width: 280px !important;
+    height: 410px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
+    z-index: 1 !important;
+    box-sizing: border-box !important;
+  }
+
+  .carousel-card-3d.mobile-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) scale(1) !important;
+    z-index: 10 !important;
+  }
+
+  .prev-btn { left: 0px !important; }
+  .next-btn { right: 0px !important; }
+}

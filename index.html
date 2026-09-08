@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Anand | Developer Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="images/RA_Logo.png">
+  <link rel="shortcut icon" href="RA_Logo_2.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Giant Static Header Name -->
+  <div class="header-container">
+    <a href="about.html" class="giant-name" data-text="RAHUL ANAND">RAHUL ANAND</a>
+  </div>
+
+  <!-- Y2K Interactive Navigation -->
+  <nav class="y2k-nav">
+    <button class="nav-btn active" onclick="switchTab('internships', this)">INTERNSHIPS</button>
+    <button class="nav-btn" onclick="switchTab('projects', this)">PROJECTS/CLUBS</button>
+    <button class="nav-btn" onclick="switchTab('languages', this)">LANGUAGES/CERTS</button>
+    <button class="nav-btn" onclick="switchTab('design', this)">GRAPHIC DESIGN</button>
+    <button class="nav-btn" onclick="switchTab('highschool', this)">HIGH SCHOOL</button>
+  </nav>
+
+  <!-- Dynamic Fisheye Card Container -->
+  <div class="fisheye-container">
+
+    <!-- 1. INTERNSHIPS -->
+    <main id="internships" class="tab-content active">
+      <div class="y2k-card clickable-card" data-card="drivedrop">
+        <div class="floating-badge blue-badge">AI EXPERT</div>
+        <h2 class="cyber-title">DriveDrop</h2>
+        <h3 class="cyber-subtitle">AI Engineer Intern</h3>
+        <p class="cyber-text">I architected a multi-agent AI framework using Qwen 2.5 and LoRA fine-tuning on Apple MLX. This system evaluates user behavior to determine lead quality with 99% model accuracy. I also designed and deployed an interactive Dummy Mode dashboard using React state management, which streamlined product specialist demo calls and cut demo times by 40-65%.</p>
+        
+        <div class="image-row">
+          <img src="images/1785944671093.jpeg" alt="DriveDrop Office" class="clean-card-img">
+          <img src="images/drivedrop-grand-cherokee-blue.png" alt="DriveDrop Jeep" class="clean-card-img">
+        </div>
+
+        <div class="card-btn-row margin-top-btn center-btn-row">
+          <a href="https://huggingface.co/rahulanand07" target="_blank" class="neon-btn">HUGGING FACE</a>
+        </div>
+      </div>
+
+      <div class="y2k-card outline-card clickable-card">
+        <div class="floating-badge yellow-badge">GEN AI</div>
+        <h2 class="cyber-title">NeuralSeek</h2>
+        <h3 class="cyber-subtitle">Agent Development Intern</h3>
+        <p class="cyber-text">I built and deployed a functional AI agent that parses YouTube Music playlists and converts them into structured text files. This reduced manual playlist migration time to near zero while earning a Level 2 AI Agent Builder Certification.</p>
+        <div class="card-media-preview">
+          <img src="images/neuralseek_Image.jpeg" alt="NeuralSeek Level 2 Certificate" class="card-full-thumb">
+        </div>
+      </div>
+
+      <div class="y2k-card clickable-card">
+        <div class="floating-badge pink-badge">FRONTEND</div>
+        <h2 class="cyber-title">TechMeKid</h2>
+        <h3 class="cyber-subtitle">Front-End Development Intern</h3>
+        <p class="cyber-text">I generated a 30% increase in overall page impressions by leading the front-end development of the events portal. I translated Figma prototypes into responsive, accessible layouts using HTML, CSS, and JavaScript. I shipped features across 20+ developer team by coordinating through GitHub pull requests and Agile code reviews on Slack</p>
+        <div class="card-media-preview">
+          <img src="images/TMKIntern.jpeg" alt="TechMeKid Certificate" class="card-full-thumb">
+        </div>
+      </div>
+    </main>
+
+    <!-- 2. PROJECTS & CLUBS -->
+    <main id="projects" class="tab-content">
+      <div class="y2k-card clickable-card" data-card="codegana">
+        <div class="floating-badge yellow-badge">FOUNDER</div>
+        <h2 class="cyber-title">CodeGana</h2>
+        <h3 class="cyber-subtitle">Founder</h3>
+        <p class="cyber-text">I founded CodeGana, a modern browser based Python coding platform designed for accessible programming education. I engineered the fullstack application using React, TypeScript, and Firebase. The platform grew to 20,000+ total impressions and 1,500 users. I applied hash tables to optimize content routing.</p>
+        <div class="brand-image-row center-brand-row" style="flex-direction: column;">
+          <div class="logo-bg-green">
+            <img src="images/codeganaLogoWide.png" alt="CodeGana Logo" class="brand-logo-wide">
+          </div>
+          <img src="images/CGScreenshot.png" alt="CodeGana Screenshot" class="brand-mascot" style="margin-top:10px;">
+        </div>
+        <a href="https://codegana.com/" target="_blank" class="neon-btn center-btn">BOOT SYSTEM</a>
+      </div>
+
+      <div class="y2k-card outline-card clickable-card" data-card="flint">
+        <div class="floating-badge blue-badge">ROBOTICS</div>
+        <h2 class="cyber-title">FLINT Autonomous Vehicle</h2>
+        <h3 class="cyber-subtitle">Staff</h3>
+        <p class="cyber-text">I proposed and led software engineering for a $1,000 street legal semi-autonomous vehicle project. My team integrated a Google Coral TPU, dual camera arrays, and microcontroller systems for real time autonomous control using Python OpenCV, PyCoral API modules, and MetaDrive Simulator training.</p>
+        
+        <div class="card-media-preview">
+          <video src="images/ARV_ FLiNT Pitch.mp4" autoplay loop muted playsinline class="card-video-player flint-video-player"></video>
+        </div>
+
+        <div class="card-btn-row margin-top-btn">
+          <a href="https://drive.google.com/drive/u/1/my-drive" target="_blank" class="neon-btn center-btn">VIEW SLIDES</a>
+        </div>
+      </div>
+      
+      <div class="y2k-card clickable-card" data-card="verses-vibes">
+        <div class="floating-badge pink-badge">NONPROFIT</div>
+        <h2 class="cyber-title">Verses & Vibes</h2>
+        <h3 class="cyber-subtitle">Web Developer & Outreach</h3>
+        <p class="cyber-text">I designed and deployed the promotional web platform and volunteer signup pipelines for this community organization. I also built a real time messaging pipeline that routes user inquiries directly to email.</p>
+        <div class="brand-image-row verses-vibes-row">
+          <img src="images/versesAndVibesLogo1.png" alt="Verses & Vibes Logo" class="brand-logo-wide verses-vibes-logo">
+          <img src="images/bookBanner.png" alt="Book Banner" class="mini-banner">
+        </div>
+        <a href="https://versesnvibes.org/" target="_blank" class="neon-btn center-btn">VISIT NONPROFIT</a>
+      </div>
+    </main>
+
+    <!-- 3. LANGUAGES & CERTS -->
+    <main id="languages" class="tab-content">
+      <div class="y2k-card clickable-card">
+        <h2 class="cyber-title">Languages & Tech Stack</h2>
+        <div class="skill-grid">
+          <div class="skill-tag">Java</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">C++</div>
+          <div class="skill-tag">TypeScript</div>
+          <div class="skill-tag">React</div>
+          <div class="skill-tag">FastAPI</div>
+          <div class="skill-tag">OpenCV</div>
+          <div class="skill-tag">Firebase</div>
+          <div class="skill-tag">Selenium</div>
+          <div class="skill-tag">Flask</div>
+          <div class="skill-tag">Swift</div>
+          <div class="skill-tag">HTML / CSS</div>
+        </div>
+        <p class="cyber-text">Proficient in fullstack architecture, machine learning pipelines, and browser tool creation. Frequently utilizing Figma, Git, Replit, and REST APIs for rapid prototyping.</p>
+      </div>
+
+      <div class="y2k-card outline-card clickable-card">
+        <h2 class="cyber-title">Certifications & Academic Honors</h2>
+        <ul class="cert-list">
+          <li>★ <strong>Level 2 AI Agent Builder Certification</strong> (NeuralSeek)</li>
+          <li>★ <strong>President Endowed Scholar</strong> (Texas A&M University)</li>
+          <li>★ <strong>National Merit Scholar & Finalist</strong> (PSAT: 1510 / Selection Index 227)</li>
+          <li>★ <strong>Letter of Recognition</strong> from the U.S. Patent & Trademark Office</li>
+          <li>★ <strong>AMSA Food Safety & Science Certification</strong></li>
+          <li>★ <strong>Front-End Engineering Internship Completion</strong> (TechMeKid)</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- 4. GRAPHIC DESIGN -->
+    <main id="design" class="tab-content">
+      <div class="y2k-card full-width-card clickable-card">
+        <div class="floating-badge pink-badge">UI / UX</div>
+        <h2 class="cyber-title">Figma Prototyping</h2>
+        <p class="cyber-text">Interactive mobile and web UI/UX mockups including MyCollegeApp and TechMeKid portals.</p>
+        
+        <div class="design-preview-grid">
+          <div class="design-preview-item">
+            <img src="images/mcaPreview.png" alt="MyCollegeApp Preview" class="design-thumb">
+            <a href="https://www.figma.com/proto/RWNPngyBvs1xwETqqiOb27/mycollegebuddy?node-id=2-14&t=BCT6CQ1s5yfwGH0L-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" class="neon-btn gentle-btn center-btn">DEMO APP</a>
+          </div>
+          <div class="design-preview-item">
+            <div class="tmk-scroll-container">
+              <img src="images/tmkPreview.png" alt="TMK Preview" class="tmk-thumb">
+            </div>
+            <a href="https://www.figma.com/proto/fPa2nuB3KAXFcKrYL8nM3I/TMK?node-id=8-111&t=uPPIyz8CaEqv3LiM-1/" target="_blank" class="neon-btn gentle-btn center-btn">DEMO TMK</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="y2k-card full-width-card clickable-card">
+        <div class="floating-badge yellow-badge">GRAPHICS</div>
+        <h2 class="cyber-title">Canva Designs</h2>
+        <p class="cyber-text">Promotional posters, medical educational infographics, and community event flyers.</p>
+        
+        <div class="canva-gallery">
+          <div class="canva-item">
+            <img src="images/MahaShivaratriHT.png" alt="Maha Shivaratri Poster" class="canva-poster">
+          </div>
+          <div class="canva-item">
+            <img src="images/Copy of Diverticultis_20250704_161123_0000.png" alt="Diverticulitis Poster" class="canva-poster">
+          </div>
+          <div class="canva-item">
+            <img src="images/4.jpg" alt="Poster 4" class="canva-poster">
+          </div>
+          <div class="canva-item">
+            <img src="images/DECA Card_20250704_161229_0000.png" alt="DECA Card Graphic" class="canva-poster">
+          </div>
+        </div>
+        
+        <a href="https://drive.google.com/drive/folders/1HE7RuYxR6-8xfPBwsDplwGC_8KarG6bC?usp=sharing" target="_blank" class="neon-btn center-btn">FULL CANVA GALLERY</a>
+      </div>
+
+      <!-- Instagram Photography Reel -->
+      <div class="y2k-card full-width-card">
+        <h2 class="cyber-title">Instagram Photography</h2>
+        <p class="cyber-text">Snapshots from travels across the world and artistic photos.</p>
+        <div class="sliderContainer" id="instaSliderContainer">
+          <button class="arrow left" id="instaPrevBtn" onclick="moveInstaSlider(-1)" aria-label="Previous Image">&#10094;</button>
+          <div class="slider" id="imageSlider">
+            <img src="images/jp1.jpg" alt="Japan Photo 1">
+            <img src="images/jp11.jpg" alt="Japan Photo 2">
+            <img src="images/jp6.jpg" alt="Japan Photo 3">
+            <img src="images/jp4.jpg" alt="Japan Photo 4">
+            <img src="images/jp5.jpg" alt="Japan Photo 5">
+            <img src="images/jp3.jpg" alt="Japan Photo 6">
+            <img src="images/jp7.jpeg" alt="Japan Photo 7">
+            <img src="images/jp8.jpg" alt="Japan Photo 8">
+            <img src="images/jp9.jpg" alt="Japan Photo 9">
+            <img src="images/jp10.jpg" alt="Japan Photo 10">
+            <img src="images/jp16.jpg" alt="Japan Photo 11">
+            <img src="images/jp2.jpg" alt="Japan Photo 12">
+            <img src="images/jp13.jpg" alt="Japan Photo 13">
+            <img src="images/jp14.jpg" alt="Japan Photo 14">
+            <img src="images/jp15.jpg" alt="Japan Photo 15">
+            <img src="images/ind1.jpg" alt="India Photo 1">
+            <img src="images/ind2.jpg" alt="India Photo 2">
+            <img src="images/ind3.jpg" alt="India Photo 3">
+            <img src="images/ind4.jpg" alt="India Photo 4">
+            <img src="images/ind5.jpg" alt="India Photo 5">
+            <img src="images/ind6.jpg" alt="India Photo 6">
+            <img src="images/ind7.jpg" alt="India Photo 7">
+            <img src="images/ind8.jpg" alt="India Photo 8">
+            <img src="images/ind9.jpg" alt="India Photo 9">
+            <img src="images/ind10.jpg" alt="India Photo 10">
+          </div>
+          <button class="arrow right" id="instaNextBtn" onclick="moveInstaSlider(1)" aria-label="Next Image">&#10095;</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- 5. HIGH SCHOOL -->
+    <main id="highschool" class="tab-content">
+      <div class="y2k-card full-width-card">
+        <div class="hs-header-flex">
+          <div class="hs-header-text">
+            <div class="floating-badge blue-badge">ALUMNI</div>
+            <h2 class="cyber-title">Marcus High School</h2>
+            <p class="cyber-text">Graduated with a <strong>3.97 GPA</strong>, ranked <strong>16 out of 754</strong> students, and scored <strong>1490 SAT</strong> / <strong>1510 PSAT</strong> (National Merit Finalist).</p>
+            <p class="cyber-text">AP Calculus BC (5), AP Government (5), AP World History (5), AP Computer Science A (4), AP Psychology (4), AP English Language (4), AP Environmental Science (4)</p>
+          </div>
+          <img src="images/marcusLogo.png" alt="Marcus High School Logo" class="marcus-hs-logo">
+        </div>
+      </div>
+
+      <div class="y2k-card full-width-card carousel-section-card">
+        <h2 class="cyber-title center-title">ACTIVITIES & CLUBS CAROUSEL</h2>
+        <p class="cyber-text center-sub">Drag, click, swipe, or use controls to rotate through high school involvements.</p>
+
+        <div class="carousel-3d-wrapper" id="carouselWrapper">
+          <button class="carousel-nav-btn prev-btn" id="carouselPrev" aria-label="Previous Card">&#10094;</button>
+          
+          <div class="carousel-3d-stage">
+            <div class="carousel-3d-cylinder" id="carouselCylinder">
+              
+              <div class="carousel-card-3d card-blue-border" data-index="0">
+                <div class="card-inner">
+                  <span class="card-tag">STATE FINALIST</span>
+                  <h3 class="card-head">Marcus DECA</h3>
+                  <p class="card-desc">Competed in Business Services Operations Research. Authored a 20 page strategic research plan for local business. I delivered 15 minute judge pitch to rank among top competitors at Texas State Competition.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/decaGroupPicture.jpg" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="3">
+                <div class="card-inner">
+                  <span class="card-tag">TEAM CAPTAIN</span>
+                  <h3 class="card-head">Social Studies UIL</h3>
+                  <p class="card-desc">Led school team as Captain. Earned 1st Place Gold Medal at Districts and 3rd Place bronze medal at 6A Regionals on South Asian history and geography. I advanced to State.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/UILMedal.jpg" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="1">
+                <div class="card-inner">
+                  <span class="card-tag">GOLD MEDALIST</span>
+                  <h3 class="card-head">Academic Decathlon</h3>
+                  <p class="card-desc">Achieved Gold Medal for Regional Competition Team. Recognized with individual medal in the Mathematics Event across 10 multidisciplinary subjects.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/acdecMedal.jpg" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="2">
+                <div class="card-inner">
+                  <span class="card-tag">VICE PRESIDENT</span>
+                  <h3 class="card-head">Marcus Stocks Club</h3>
+                  <p class="card-desc">Served as Vice President of Outreach. Designed virtual stock market simulations and scenario competitions, growing active membership to over 30 participants.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/stocksClub.jpg" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="4">
+                <div class="card-inner">
+                  <span class="card-tag">ATHLETE</span>
+                  <h3 class="card-head">Marcus JV Tennis</h3>
+                  <p class="card-desc">Competed for 3 years with a 3.5 UTR singles rating. Earned 3rd place medals in both District and Regional singles tournaments.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/UTR.jpg" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="5">
+                <div class="card-inner">
+                  <span class="card-tag">VOLUNTEER TUTOR</span>
+                  <h3 class="card-head">Schoolhouse.world</h3>
+                  <p class="card-desc">Tutored high school juniors worldwide in SAT Math. Delivered interactive lectures on Desmos software and TI-84 calculator time saving strategies, raising scores by 20+ points.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/schoolhouseWorld.png" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="6">
+                <div class="card-inner">
+                  <span class="card-tag">YOUTH LEADER</span>
+                  <h3 class="card-head">Camp Invention</h3>
+                  <p class="card-desc">Facilitated hands on STEM modules and intellectual property problem solving. Received official Letter of Recognition from the Chief Communication Officer of the USPTO.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/campInvention.jpeg" alt="DECA Graphic" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-card-3d card-pink-border" data-index="7">
+                <div class="card-inner">
+                  <span class="card-tag">COMMUNITY</span>
+                  <h3 class="card-head">Siddhi Hanuman Temple</h3>
+                  <p class="card-desc">Assisted with prasad offerings and youth outreach. Learned to read Hindi and Sanskrit while designing digital festival posters using Canva.</p>
+                  <div class="card-img-placeholder">
+                    <img src="images/temple.jpg" alt="Maha Shivaratri Poster" class="carousel-img">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="carousel-nav-btn next-btn" id="carouselNext" aria-label="Next Card">&#10095;</button>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- macOS Interactive Terminal Modal -->
+  <div id="macTerminalModal" class="mac-modal-overlay">
+    <div class="mac-terminal-window">
+      <div class="mac-terminal-header">
+        <div class="mac-dots">
+          <button class="mac-dot mac-red-dot" id="closeTerminalBtn" aria-label="Close Terminal"></button>
+          <span class="mac-dot mac-yellow-dot"></span>
+          <span class="mac-dot mac-green-dot"></span>
+        </div>
+        <div class="mac-terminal-title">terminal@rahulanand ~ % view-card.sh</div>
+      </div>
+      <div class="mac-terminal-body" id="macModalContent">
+        <!-- Dynamic card content injected here -->
+      </div>
+      <div class="mac-terminal-red-line" id="closeTerminalLine" aria-label="Close Terminal">
+        <span>TAP RED LINE TO EXIT TERMINAL</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab Switching & Reload Persistence
+    function switchTab(tabId, clickedBtn) {
+      localStorage.setItem('activeTab', tabId);
+      
+      // Use query param in URL instead of hash to prevent browser auto-scrolling to element ID
+      if (history.replaceState) {
+        history.replaceState(null, null, '?tab=' + tabId);
+      }
+
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+        content.style.animation = 'none';
+      });
+
+      if (clickedBtn) {
+        clickedBtn.classList.add('active');
+      } else {
+        const btn = document.querySelector(`.nav-btn[onclick*="${tabId}"]`);
+        if (btn) btn.classList.add('active');
+      }
+
+      const targetTab = document.getElementById(tabId);
+      if (targetTab) {
+        targetTab.classList.add('active');
+        void targetTab.offsetWidth;
+        targetTab.style.animation = 'popInFisheye 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
+      }
+
+      // Ensure view starts at top of page after DOM updates
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 0);
+
+      if (tabId === 'highschool') {
+        requestAnimationFrame(() => {
+          setTimeout(updateCarouselPosition, 30);
+        });
+      }
+
+      if (tabId === 'design') {
+        requestAnimationFrame(() => {
+          updateInstaMobileSlider();
+        });
+      }
+    }
+
+    // Horizontal Scroll Slider (Desktop)
+    function scrollSlider(direction) {
+      const slider = document.getElementById('imageSlider');
+      if (slider) {
+        const scrollAmount = 320; 
+        slider.scrollBy({
+          left: direction * scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Instagram Photography Slider State
+    let currentInstaIndex = 0;
+
+    function updateInstaMobileSlider() {
+      const instaImages = document.querySelectorAll('#imageSlider img');
+      if (!instaImages || instaImages.length === 0) return;
+
+      if (window.innerWidth <= 768) {
+        instaImages.forEach((img, idx) => {
+          if (idx === currentInstaIndex) {
+            img.style.display = 'block';
+          } else {
+            img.style.display = 'none';
+          }
+        });
+      } else {
+        instaImages.forEach(img => {
+          img.style.display = 'block';
+        });
+      }
+    }
+
+    function moveInstaSlider(direction) {
+      const instaImages = document.querySelectorAll('#imageSlider img');
+      if (window.innerWidth <= 768) {
+        if (direction === 1) {
+          currentInstaIndex = (currentInstaIndex + 1) % instaImages.length;
+        } else {
+          currentInstaIndex = (currentInstaIndex - 1 + instaImages.length) % instaImages.length;
+        }
+        updateInstaMobileSlider();
+      } else {
+        scrollSlider(direction);
+      }
+    }
+
+    // Carousel State & Logic
+    let currentCardIndex = 0;
+    let currentAngle = 0;
+    const totalCards = 8;
+    const angleStep = 360 / totalCards;
+
+    function getRadius() {
+      return window.innerWidth < 768 ? 220 : 380;
+    }
+
+    function updateCarouselPosition() {
+      const isMobile = window.innerWidth <= 768;
+      const cylinder = document.getElementById('carouselCylinder');
+      const cards = document.querySelectorAll('.carousel-card-3d');
+      if (!cylinder || cards.length === 0) return;
+
+      if (isMobile) {
+        cards.forEach((card, idx) => {
+          if (idx === currentCardIndex) {
+            card.classList.add('mobile-active');
+          } else {
+            card.classList.remove('mobile-active');
+          }
+          card.style.transform = '';
+        });
+        cylinder.style.transform = '';
+      } else {
+        const radius = getRadius();
+        cards.forEach((card, idx) => {
+          card.classList.remove('mobile-active');
+          const cardAngle = angleStep * idx;
+          card.style.transform = `rotateY(${cardAngle}deg) translateZ(${radius}px)`;
+        });
+        cylinder.style.transform = `translateZ(-${radius}px) rotateY(${currentAngle}deg)`;
+      }
+    }
+
+    function rotateCarousel(direction) {
+      if (direction === -1) {
+        currentCardIndex = (currentCardIndex + 1) % totalCards;
+      } else {
+        currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
+      }
+      currentAngle = -currentCardIndex * angleStep;
+      updateCarouselPosition();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Disable automatic browser scroll restoration on page switch
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+
+      // Restore Current Tab on Page Reload
+      const hash = window.location.hash.replace('#', '');
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = urlParams.get('tab');
+      const savedTab = localStorage.getItem('activeTab');
+
+      const initialTab = hash || tabParam || savedTab || 'internships';
+      if (document.getElementById(initialTab)) {
+        switchTab(initialTab, null);
+      } else {
+        switchTab('internships', null);
+      }
+
+      // Terminal Modal Setup
+      const modal = document.getElementById('macTerminalModal');
+      const modalContent = document.getElementById('macModalContent');
+      const closeBtn = document.getElementById('closeTerminalBtn');
+      const closeLine = document.getElementById('closeTerminalLine');
+
+      // Instagram Photo Click -> Single Photo Terminal View
+      const instaPhotos = document.querySelectorAll('#imageSlider img');
+      instaPhotos.forEach(img => {
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const imgSrc = img.getAttribute('src');
+          const imgAlt = img.getAttribute('alt') || 'Instagram Photo';
+
+          modalContent.innerHTML = `
+            <div class="insta-terminal-view" style="text-align: center;">
+              <h2 class="cyber-title" style="font-size: 1.6rem; margin-bottom: 0.3rem;">INSTAGRAM GALLERY</h2>
+              <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <img src="${imgSrc}" alt="${imgAlt}" class="single-terminal-photo">
+              </div>
+            </div>
+          `;
+          modal.classList.add('active');
+        });
+      });
+
+      // Card Modal Click Handler
+      document.querySelectorAll('.clickable-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.slider') || e.target.closest('.arrow')) return;
+
+          const cardType = card.getAttribute('data-card');
+          if (cardType === 'codegana') {
+            modalContent.innerHTML = `
+              <div class="floating-badge yellow-badge">FOUNDER</div>
+              <h2 class="cyber-title">CodeGana</h2>
+              <h3 class="cyber-subtitle">Founder</h3>
+              <p class="cyber-text">I founded CodeGana, a modern browser based Python coding platform designed for accessible programming education. I engineered the fullstack application using React, TypeScript, and Firebase. The platform grew to 20,000+ total impressions and 1,500 users. I applied hash tables to optimize content routing.</p>
+              <div class="codegana-terminal-container">
+                <img src="images/CGScreenshot.png" alt="CodeGana Image" class="brand-logo-wide codegana-term-img">
+                <img src="images/CGmascotLeft!.png" alt="CodeGana Mascot" class="brand-mascot codegana-term-mascot">
+              </div>
+              <div class="card-btn-row center-btn-row margin-top-btn">
+                <a href="https://codegana.com/" target="_blank" class="neon-btn center-btn">BOOT SYSTEM</a>
+              </div>
+            `;
+          } else {
+            modalContent.innerHTML = card.innerHTML;
+          }
+
+          modal.classList.add('active');
+        });
+      });
+
+      const handleCloseTerminal = () => {
+        if (closeBtn) closeBtn.classList.add('squish-btn');
+        setTimeout(() => {
+          modal.classList.remove('active');
+          if (closeBtn) closeBtn.classList.remove('squish-btn');
+        }, 150);
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', handleCloseTerminal);
+      if (closeLine) closeLine.addEventListener('click', handleCloseTerminal);
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) modal.classList.remove('active');
+        });
+      }
+
+      // Carousel Controls
+      const prevBtn = document.getElementById('carouselPrev');
+      const nextBtn = document.getElementById('carouselNext');
+
+      if (prevBtn) prevBtn.addEventListener('click', () => { rotateCarousel(1); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { rotateCarousel(-1); });
+
+      document.querySelectorAll('.carousel-card-3d').forEach((card, idx) => {
+        card.addEventListener('click', () => {
+          currentCardIndex = idx;
+          currentAngle = -idx * angleStep;
+          updateCarouselPosition();
+        });
+      });
+
+      // Mobile Touch Swipe Handler for Carousel
+      let touchStartX = 0;
+      let touchEndX = 0;
+      const carouselStage = document.getElementById('carouselWrapper');
+
+      if (carouselStage) {
+        carouselStage.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselStage.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          if (window.innerWidth <= 768) {
+            const swipeThreshold = 35;
+            if (touchEndX < touchStartX - swipeThreshold) {
+              rotateCarousel(-1);
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+              rotateCarousel(1);
+            }
+          }
+        }, { passive: true });
+      }
+
+      window.addEventListener('resize', () => {
+        updateCarouselPosition();
+        updateInstaMobileSlider();
+      });
+
+      updateCarouselPosition();
+      updateInstaMobileSlider();
+    });
+  </script>
+</body>
+</html>

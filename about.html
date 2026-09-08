@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Anand | About Me</title>
+  <link rel="icon" type="image/jpeg" href="images/RA_Logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="about-body">
+
+  <!-- Fullscreen Animated Intro Overlay -->
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-content">
+      <div class="name-split-part first-name" id="firstName">
+        <span>R</span><span>A</span><span>H</span><span>U</span><span>L</span>
+      </div>
+      <div class="intro-preview-box" id="previewBox">
+        <div class="preview-inner">
+          <img src="images/IMG_1180.JPG" alt="Rahul Night Preview" class="preview-img">
+        </div>
+      </div>
+      <div class="name-split-part last-name" id="lastName">
+        <span>A</span><span>N</span><span>A</span><span>N</span><span>D</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Top Navigation Bar (Animated Slide-Down) -->
+  <header class="sticky-topbar" id="stickyTopbar">
+    <div class="topbar-container">
+      
+      <!-- Left: Logo + Name -->
+      <a href="about.html" class="topbar-brand">
+        <img src="images/RA_Logo.png" alt="Rahul Anand Logo" class="topbar-logo-img">
+        <span class="topbar-brand-name">RAHUL ANAND</span>
+      </a>
+      
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Center: Navigation Tabs -->
+      <nav class="topbar-nav" id="topbarNav">
+        <a href="index.html?tab=internships" class="topbar-btn">INTERNSHIPS</a>
+        <a href="index.html?tab=projects" class="topbar-btn">PROJECTS/CLUBS</a>
+        <a href="index.html?tab=languages" class="topbar-btn">LANGUAGES/CERTS</a>
+        <a href="index.html?tab=design" class="topbar-btn">GRAPHIC DESIGN</a>
+
+        <!-- ADD THIS NEW MOBILE-ONLY SECTION HERE -->
+        <div class="mobile-social-links">
+          <a href="https://www.linkedin.com/in/rahul-anand-39b214320/" target="_blank" rel="noopener noreferrer" class="mobile-social-btn">
+            <img src="images/linkedinLogo.webp" alt="LinkedIn" class="mobile-social-icon">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/rahulanandcs?tab=repositories" target="_blank" rel="noopener noreferrer" class="mobile-social-btn">
+            <img src="images/githubIcon.webp" alt="GitHub" class="mobile-social-icon">
+            <span>GitHub</span>
+          </a>
+          <a href="images/Rahul_Anand_Resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-social-btn">
+            <img src="images/resumeIcon.png" alt="Resume" class="mobile-social-icon">
+            <span>Resume</span>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulanandbus@gmail.com" target="_blank" rel="noopener noreferrer" class="mobile-social-btn email-trigger-btn">
+            <img src="images/gmailIcon.png" alt="Gmail" class="mobile-social-icon">
+            <span>Gmail</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Right: Social & Quick Action Icons -->
+      <div class="topbar-actions">
+        <a href="https://www.linkedin.com/in/rahul-anand-39b214320/" target="_blank" rel="noopener noreferrer" class="topbar-icon-link" title="LinkedIn Profile">
+          <img src="images/linkedinLogo.webp" alt="LinkedIn" class="topbar-icon-img">
+        </a>
+        <a href="https://github.com/rahulanandcs?tab=repositories" target="_blank" rel="noopener noreferrer" class="topbar-icon-link" title="GitHub Repositories">
+          <img src="images/githubIcon.webp" alt="GitHub" class="topbar-icon-img">
+        </a>
+        <a href="images/Rahul_Anand_Resume.pdf" target="_blank" rel="noopener noreferrer" class="topbar-icon-link" title="View Resume PDF">
+          <img src="images/resumeIcon.png" alt="Resume PDF" class="topbar-icon-img">
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulanandbus@gmail.com" target="_blank" rel="noopener noreferrer" class="topbar-icon-link email-trigger-btn" title="Email Me via Gmail">
+          <img src="images/gmailIcon.png" alt="Gmail" class="topbar-icon-img">
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section (Full Viewport Height & Layered Text with Sweep Reveal) -->
+  <section class="hero-night-section">
+    <div class="hero-bg-wrapper">
+      <img src="images/IMG_1180.JPG" alt="Rahul Anand Night Portrait" class="hero-full-img">
+    </div>
+    <div class="hero-text-overlay">
+      <div class="reveal-text-wrapper">
+        <h1 class="hero-giant-title">RAHUL ANAND</h1>
+      </div>
+      <p class="hero-subtitle">COMPUTER SCIENCE @ TEXAS A&M</p>
+      <p class="hero-subtitle">★ PRESIDENT ENDOWED SCHOLAR</p>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="about-main-container">
+
+    <!-- Section 1: The Snapshot -->
+    <section class="about-section scroll-reveal" id="snapshot">
+      <h2 class="section-cyber-title">THE SNAPSHOT</h2>
+      
+      <div class="snapshot-grid">
+        <div class="snapshot-bio-card">
+          <p class="bio-lead">I am a <strong>Computer Science student at Texas A&M University</strong> and a <strong>President Endowed Scholar</strong> with a focus on AI systems, fullstack engineering, and EdTech innovations.</p>
+          <ul class="bio-list">
+            <li><strong>Current Status:</strong> Major: Computer Science, Minor: Engineering Entrepreneurship @ Texas A&M University</li>
+            <li><strong>Recent Experience:</strong> AI Engineer Intern at <em>DriveDrop</em> (Fine-tuning LLMs with MLX/LoRA, React dashboards, Meta Ad Campaigns)</li>
+            <li><strong>Core Passion:</strong> EdTech & Developer Tools (Founder of <em>CodeGana</em>)</li>
+          </ul>
+        </div>
+
+        <div class="highlight-cards-wrapper">
+          <div class="metric-card">
+            <span class="metric-number">99%</span>
+            <span class="metric-label">Model Accuracy achieved in lead scoring</span>
+          </div>
+          <div class="metric-card highlight-glow">
+            <span class="metric-number">20K+</span>
+            <span class="metric-label">Impressions on CodeGana</span>
+          </div>
+          <div class="metric-card badge-card">
+            <span class="metric-tag">STATUS</span>
+            <span class="metric-text-bold">Looking For Internships</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Where I've Worked & What I've Built -->
+    <section class="about-section scroll-reveal" id="experience">
+      <h2 class="section-cyber-title">WHERE I'VE WORKED & WHAT I'VE BUILT</h2>
+
+      <h3 class="subsection-title">Industry Internships</h3>
+      <div class="experience-grid">
+        <div class="exp-card">
+          <div class="exp-header">
+            <h4>DriveDrop</h4>
+            <span class="exp-role">AI Engineer Intern</span>
+          </div>
+          <p>Architected multi-agent AI frameworks, fine tuned Qwen 2.5 with LoRA on Apple MLX, and engineered interactive dummy demo modes with React to reduce demo call duration by 40-65%.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <h4>NeuralSeek</h4>
+            <span class="exp-role">Agent Development Intern</span>
+          </div>
+          <p>Developed AI agents for automated playlist migration, parsing YouTube Music playlists into structured text formats with zero manual overhead.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <h4>TechMeKid</h4>
+            <span class="exp-role">Front-End Dev Intern</span>
+          </div>
+          <p>Translated Figma prototypes into responsive HTML/CSS/JS layouts for the events portal, driving a 30% surge in overall page impressions.</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title margin-top-lg">Key Projects & Leadership</h3>
+      <div class="experience-grid">
+        <div class="exp-card project-card">
+          <h4>CodeGana</h4>
+          <p>Founded and engineered a gamified browser coding platform using React, TypeScript, and Firebase for accessible programming education.</p>
+          <a href="https://codegana.com/" target="_blank" class="mini-neon-btn">VISIT PLATFORM</a>
+        </div>
+
+        <div class="exp-card project-card">
+          <h4>FLINT Autonomous Vehicle</h4>
+          <p>Led a $1,000 semi-autonomous scale vehicle project integrating Google Coral TPU, dual camera sensor arrays, and OpenCV/PyCoral modules.</p>
+          <a href="https://drive.google.com/file/d/1Vjlo-HGunM2hFvlECMGWNfV9H0WmqMRN/view?usp=sharing/" target="_blank" class="mini-neon-btn">VIEW PITCH</a>
+        </div>
+
+        <div class="exp-card project-card">
+          <h4>Verses & Vibes</h4>
+          <p>Designed and deployed the promotional web platform, volunteer signup pipelines, and real time user inquiry routing.</p>
+          <a href="https://versesnvibes.org/" target="_blank" class="mini-neon-btn">VISIT SITE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Technical Toolkit -->
+    <section class="about-section scroll-reveal" id="toolkit">
+      <h2 class="section-cyber-title">TECHNICAL TOOLKIT</h2>
+
+      <div class="toolkit-grid">
+        <div class="tool-box">
+          <h4 class="tool-cat-title">LANGUAGES</h4>
+          <div class="tag-cloud">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <h4 class="tool-cat-title">FRAMEWORKS & LIBRARIES</h4>
+          <div class="tag-cloud">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Rest APIs</span>
+            <span class="tech-pill">OpenCV</span>
+            <span class="tech-pill">PyTorch / MLX</span>
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <h4 class="tool-cat-title">TOOLS & PLATFORMS</h4>
+          <div class="tag-cloud">
+            <span class="tech-pill">Git / GitHub</span>
+            <span class="tech-pill">Visual Studios Code</span>
+            <span class="tech-pill">Figma</span>
+            <span class="tech-pill">Excel</span>
+            <span class="tech-pill">Word</span>
+            <span class="tech-pill">Powerpoint</span>
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <h4 class="tool-cat-title">SPECIALIZATIONS</h4>
+          <div class="tag-cloud">
+            <span class="tech-pill">Multi-Agent AI Systems</span>
+            <span class="tech-pill">Web Applications</span>
+            <span class="tech-pill">UI/UX Design</span>
+            <span class="tech-pill">Digital Advertizing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Beyond the Code -->
+    <section class="about-section scroll-reveal" id="personal">
+      <h2 class="section-cyber-title">BEYOND THE CODE</h2>
+
+      <div class="personal-grid">
+        <div class="personal-card">
+          <h3>Interests & Pursuits</h3>
+          <p>Proud Indian, an avid <strong>pickleball</strong> player, and love spending time <strong>hiking</strong> outdoors. When indoors, I enjoy competitive <strong>card games</strong>, immersing myself in <strong>anime and visually vibrant films</strong>, and tweaking <strong>retro gaming consoles</strong>.</p>
+        </div>
+
+        <div class="personal-card fun-fact-card">
+          <h3>Honors & Background</h3>
+          <ul class="fact-list">
+            <li>★ President Endowed Scholar @ Texas A&M</li>
+            <li>★ National Merit Finalist</li>
+            <li>★ Captain for State University Interscholastic League</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Section 5: Footer / Let's Connect -->
+  <footer class="about-footer">
+    <div class="footer-content">
+      <h2 class="footer-title">LET'S CONNECT</h2>
+      <p class="footer-sub">Interested in collaborating or discussing opportunities?</p>
+      
+      <div class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulanandbus@gmail.com" target="_blank" class="footer-btn email-trigger-btn" id="emailBtn">EMAIL ME</a>
+        <a href="https://www.linkedin.com/in/rahul-anand-39b214320/" target="_blank" class="footer-btn">LINKEDIN</a>
+        <a href="https://github.com/rahulanandcs?tab=repositories" target="_blank" class="footer-btn">GITHUB</a>
+      </div>
+
+      <!-- Expandable Resume Action Button -->
+      <div class="resume-wrapper">
+        <button id="toggleResumeBtn" class="neon-btn">DOWNLOAD RESUME</button>
+      </div>
+
+      <!-- Interactive Image Resume Viewer -->
+      <div id="resumeViewerWrapper" class="resume-expand-container">
+        <a href="images/Rahul_Anand_Resume.pdf" target="_blank" class="resume-preview-link">
+          <div class="resume-image-card">
+            <div class="resume-img-frame">
+              <img src="images/Rahul_Anand_Resume.jpg" alt="Rahul Anand Resume" class="resume-full-img">
+              <div class="resume-hover-overlay">
+                <span class="overlay-text-btn">Click to View in New Tab</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <p class="copyright">© 2026 RAHUL ANAND. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast-notification">Email copied to clipboard! Opening Gmail...</div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu Toggle
+      const mobileToggle = document.getElementById('mobileNavToggle');
+      const topbarNav = document.getElementById('topbarNav');
+
+      if (mobileToggle && topbarNav) {
+        mobileToggle.addEventListener('click', () => {
+          mobileToggle.classList.toggle('active');
+          topbarNav.classList.toggle('open');
+        });
+      }
+
+      // 2. Expandable Resume Viewer
+      const toggleResumeBtn = document.getElementById('toggleResumeBtn');
+      const resumeViewerWrapper = document.getElementById('resumeViewerWrapper');
+
+      if (toggleResumeBtn && resumeViewerWrapper) {
+        toggleResumeBtn.addEventListener('click', () => {
+          const isOpen = resumeViewerWrapper.classList.contains('expanded');
+          if (isOpen) {
+            resumeViewerWrapper.classList.remove('expanded');
+            toggleResumeBtn.innerText = 'DOWNLOAD RESUME';
+          } else {
+            resumeViewerWrapper.classList.add('expanded');
+            toggleResumeBtn.innerText = 'HIDE RESUME PREVIEW';
+            resumeViewerWrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      }
+
+      // 3. Email Triggers (Footer Button & Topbar Gmail Icon)
+      const emailBtns = document.querySelectorAll('.email-trigger-btn');
+      const toast = document.getElementById('toast');
+
+      emailBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const email = 'rahulanandbus@gmail.com';
+
+          // Copy email to clipboard
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).catch(err => console.error(err));
+          } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = email;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+          }
+
+          // Trigger Toast Notification
+          if (toast) {
+            toast.classList.add('show');
+            setTimeout(() => {
+              toast.classList.remove('show');
+            }, 3500);
+          }
+
+          // Open Gmail Compose in a new tab
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+          window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        });
+      });
+
+      // 4. Sequential Intro Animation Timings
+      const overlay = document.getElementById('intro-overlay');
+      const firstName = document.getElementById('firstName');
+      const lastName = document.getElementById('lastName');
+      const previewBox = document.getElementById('previewBox');
+
+      setTimeout(() => {
+        // Step A: Split words
+        firstName.classList.add('shift-left');
+        lastName.classList.add('shift-right');
+        previewBox.classList.add('reveal');
+
+        // Step B: Expand image box outward
+        setTimeout(() => {
+          previewBox.classList.add('expand-fullscreen');
+          firstName.classList.add('push-out');
+          lastName.classList.add('push-out');
+
+          // Step C: Fade overlay out, slide navbar down, and trigger title reveal
+          setTimeout(() => {
+            overlay.classList.add('fade-out');
+            document.body.classList.add('intro-complete');
+          }, 900);
+
+        }, 950);
+
+      }, 1000);
+
+      // 5. Scroll Reveal Observer
+      const revealElements = document.querySelectorAll('.scroll-reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      revealElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
