@@ -991,7 +991,7 @@ a.giant-name {
     border-top: 8px solid #cc2d24 !important;
     cursor: pointer;
     color: #ffffff;
-    font-size: 1.1rem !important;
+    font-size: 0.9rem !important;
     font-weight: 900;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -1171,4 +1171,14 @@ a.giant-name {
 
   .prev-btn { left: 0px !important; }
   .next-btn { right: 0px !important; }
+}
+
+/* Prevent body background scrolling when modal is active */
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* Shift UTR tennis image alignment to show the left side */
+.carousel-img[src*="UTR.jpg"] {
+  object-position: left center !important;
 }
