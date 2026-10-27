@@ -375,6 +375,7 @@ a.giant-name {
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
   cursor: pointer;
   border: none;
+  text-decoration: underline;
 }
 
 .neon-btn:hover {

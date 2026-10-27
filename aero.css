@@ -1,0 +1,191 @@
+/* Pure Frutiger Aero — load after style.css and about.css. */
+:root {
+  --neon-blue: #0077ff;
+  --neon-pink: #0077ff;
+  --neon-yellow: #287d0b;
+  --pearly-white: #123e61;
+  --bg-dark: #fff;
+  --aero-shadow: 0 12px 32px #0062a52b, 0 3px 8px #0062a518;
+}
+body, .about-body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #123e61;
+  background: radial-gradient(ellipse at 12% 0%, #ffffffed, transparent 36%),
+    radial-gradient(ellipse at 95% 12%, #00d4ff, transparent 48%),
+    linear-gradient(155deg, #71e4ff 0%, #0077ff 48%, #00d4ff 78%, #4cbb17 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+p, .cyber-text, .card-desc {
+  font-family: 'Open Sans', Helvetica, sans-serif !important;
+}
+h1, h2, h3, h4, .giant-name, .name-split-part, .metric-number, .topbar-brand-name {
+  font-family: 'Nunito', Helvetica, sans-serif;
+  letter-spacing: -.025em;
+  text-transform: none;
+}
+::selection { background: #ffd700; color: #123e61; }
+p, .cyber-text, .card-desc, .metric-label, .bio-list li, .fact-list li { color: #345670; }
+.header-container {
+  max-width: 1200px; margin: 0 auto; padding: 64px 24px 30px;
+  text-align: center;
+}
+.header-container::before {
+  content: 'A world of ideas. A brighter tomorrow.';
+  display: block; color: #123e61; font-size: .9rem; font-weight: 700;
+  margin-bottom: 18px;
+}
+.header-container::after {
+  content: 'Explore my work in engineering, design, and community.';
+  display: block; margin-top: 20px; color: #123e61;
+}
+.giant-name {
+  font-size: clamp(3.2rem, 10vw, 7rem); line-height: 1.05;
+  color: #fff; -webkit-text-stroke: 0;
+  text-shadow: 0 2px 0 #0077ff, 0 7px 22px #0059a955;
+}
+.giant-name:hover {
+  color: #fff; -webkit-text-stroke: 0;
+  text-shadow: 0 2px 0 #0077ff, 0 0 30px #fff;
+  transform: translateY(-3px);
+}
+.y2k-nav { gap: 12px; margin-bottom: 32px; }
+.nav-btn, .neon-btn, .gentle-btn, .topbar-btn, .mini-neon-btn,
+.footer-btn, .overlay-text-btn, #toggleResumeBtn, .arrow, .carousel-nav-btn {
+  clip-path: none !important; border-radius: 999px;
+  border: 1px solid #ffffffda;
+  background: linear-gradient(#fff 0%, #e6faff 46%, #b4e7ff 49%, #e8faff 100%);
+  color: #07558a; font-family: 'Nunito', sans-serif;
+  font-weight: 800; letter-spacing: .02em;
+  box-shadow: inset 0 1px 2px #fff, inset 0 -2px 3px #0085c926, 0 5px 12px #0059a933;
+}
+.nav-btn, .neon-btn, .topbar-btn, .mini-neon-btn, .footer-btn {
+  font-size: .85rem; padding: 12px 22px;
+}
+.nav-btn.active, .nav-btn:hover, .neon-btn:hover, .topbar-btn:hover,
+.mini-neon-btn:hover, .footer-btn:hover, #toggleResumeBtn:hover {
+  color: #fff;
+  background: linear-gradient(#52cfff 0%, #0077cf 46%, #0059bb 49%, #0077ff 100%);
+  box-shadow: inset 0 1px 2px #ffffffd9, 0 5px 20px #0077ff66;
+  transform: translateY(-2px);
+}
+.y2k-card, .outline-card, .carousel-card-3d, .snapshot-bio-card,
+.metric-card, .exp-card, .tool-box, .personal-card, .resume-image-card {
+  background: linear-gradient(155deg, #fff 65%, #effbff);
+  border: 1px solid #ffffffed; border-radius: 28px;
+  box-shadow: var(--aero-shadow); backdrop-filter: blur(12px);
+}
+.y2k-card { padding: 36px; }
+.y2k-card:hover, .outline-card:hover, .exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px #0062a538, 0 0 18px #ffffff66;
+}
+.tab-content { gap: 32px; }
+.cyber-title { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.cyber-subtitle, .exp-role, .subsection-title, .tool-cat-title, .metric-tag { color: #176e17; }
+.floating-badge {
+  top: -14px; right: 18px; border-radius: 999px;
+  background: linear-gradient(#dcff94, #83e044 45%, #4cbb17 50%, #b4f35c);
+  color: #204c0c; border: 1px solid #fff; font-size: .7rem;
+  padding: 7px 14px; box-shadow: 0 4px 10px #287d0b30;
+  animation: none; transform: rotate(3deg);
+}
+.blue-badge { background: linear-gradient(#c9f8ff, #48cbff); color: #07558a; }
+.pink-badge { background: linear-gradient(#fff6b3, #ffd700); color: #634900; }
+.skill-tag, .tech-pill, .card-tag {
+  background: linear-gradient(#fff, #def7ff); color: #07558a;
+  border: 1px solid #a5dcf3; border-radius: 999px;
+}
+.logo-bg-green, .logo-bg-blue {
+  background: #fff !important; border: 1px solid #cfebf5; border-radius: 18px;
+}
+.clean-card-img, .card-full-thumb, .card-video-player, .design-thumb,
+.tmk-scroll-container, .canva-poster, .slider img, .mini-banner,
+.card-img-placeholder, .resume-img-frame, .resume-full-img { border-radius: 18px; }
+.canva-poster, .tmk-scroll-container { background: #e8f7ff; }
+.card-blue-border, .card-pink-border {
+  border: 1px solid #fff !important; box-shadow: var(--aero-shadow);
+}
+.mac-modal-overlay { background: #0065a25c; backdrop-filter: blur(16px); }
+.mac-terminal-window {
+  background: #fff; border: 1px solid #fff; border-radius: 26px;
+  box-shadow: 0 24px 70px #00457755;
+}
+.mac-terminal-header {
+  background: linear-gradient(#fff, #c4edff); border-bottom: 1px solid #a4daee;
+}
+.mac-terminal-title { font-family: 'Nunito', sans-serif; color: #07558a; }
+.mac-terminal-body img { border-radius: 18px; }
+.intro-overlay { background: radial-gradient(ellipse at 30% 20%, #fff, #00d4ff 55%, #0077ff); }
+.intro-preview-box, .preview-img { background: #dcf7ff; border-radius: 24px; }
+.name-split-part { color: #fff; text-shadow: 0 3px 15px #0077ff77; }
+.sticky-topbar {
+  background: linear-gradient(#ffffffed, #d5f4ffde);
+  border-bottom: 1px solid #fff; box-shadow: 0 4px 20px #0077ff22;
+}
+.topbar-brand, .topbar-brand-name { color: #07558a; }
+.topbar-logo-img { border: 2px solid #fff; box-shadow: 0 2px 8px #0077ff33; }
+.topbar-icon-link {
+  background: linear-gradient(#fff, #c3edff); border: 1px solid #fff;
+  border-radius: 50%; box-shadow: inset 0 1px 2px #fff, 0 3px 8px #0077ff22;
+}
+.topbar-icon-link:hover { background: #fff; border-color: #00d4ff; box-shadow: 0 0 16px #00d4ff77; }
+.hamburger-line { background: #07558a; }
+.hero-night-section {
+  width: calc(100% - 32px); margin: 88px auto 0; height: min(780px, 85vh);
+  border-radius: 36px; border: 2px solid #ffffffcc; box-shadow: var(--aero-shadow);
+}
+.hero-bg-wrapper::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(0deg, #003d68b8, transparent 75%);
+}
+.reveal-text-wrapper .hero-giant-title { color: #fff; text-shadow: 0 3px 16px #004577; }
+.hero-subtitle { color: #fff; text-shadow: 0 2px 8px #004577; }
+.reveal-text-wrapper::after { background: #00d4ff; }
+.about-main-container { padding-top: 70px; }
+.about-section { margin-bottom: 70px; }
+.section-cyber-title { color: #fff; text-shadow: 0 2px 8px #00518c; }
+.metric-number { color: #0070d1; }
+.metric-card.highlight-glow { border-color: #fff; box-shadow: var(--aero-shadow), 0 0 20px #39ff1440; }
+.metric-text-bold, .exp-header h4, .personal-card h3 { color: #123e61; }
+.about-footer {
+  background: linear-gradient(#f4fdffef, #d8f5ffef);
+  border-top: 1px solid #fff; border-radius: 48px 48px 0 0;
+  padding: 64px 24px 36px; box-shadow: 0 -8px 30px #0077ff22;
+}
+.footer-title { color: #07558a; }
+.footer-sub, .copyright { color: #345670; }
+.toast-notification {
+  background: linear-gradient(#efffcf, #a1ee58); color: #204c0c;
+  border: 1px solid #fff; box-shadow: var(--aero-shadow);
+}
+.resume-hover-overlay { background: #0077ff66; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #005bb5; outline-offset: 5px;
+}
+@media (max-width: 820px) {
+  .topbar-nav { background: #effbff; border-radius: 0 0 24px 24px; }
+  .mobile-social-btn { color: #07558a; }
+  .mobile-social-btn:hover { color: #07558a; background: #d6f5ff; }
+  .topbar-btn { padding: 12px 16px; }
+}
+@media (max-width: 600px) {
+  .header-container { padding: 44px 20px 24px; }
+  .y2k-nav { padding: 20px; gap: 8px; }
+  .nav-btn { font-size: .7rem; padding: 12px 14px; }
+  .fisheye-container, .about-main-container { padding-left: 18px; padding-right: 18px; }
+  .tab-content, .experience-grid, .toolkit-grid, .design-preview-grid { grid-template-columns: minmax(0, 1fr); }
+  .y2k-card { padding: 28px 20px; }
+  .hero-night-section { border-radius: 26px; }
+  .mini-banner { margin-left: 0; max-width: 100%; }
+  .verses-vibes-logo { margin-left: 0 !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important; animation-delay: 0s !important;
+    transition-duration: .01ms !important; scroll-behavior: auto !important;
+  }
+  .intro-overlay { display: none; }
+  .sticky-topbar { transform: none; }
+  .scroll-reveal, .hero-subtitle, .reveal-text-wrapper .hero-giant-title { opacity: 1; transform: none; }
+}
