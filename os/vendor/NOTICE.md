@@ -1,0 +1,1 @@
+GSAP 3.13.0, ScrollTrigger and MorphSVGPlugin. Distributed from the public gsap package: https://www.npmjs.com/package/gsap/v/3.13.0 . Copyright and license notices retained in the script headers. License: https://gsap.com/standard-license/ .

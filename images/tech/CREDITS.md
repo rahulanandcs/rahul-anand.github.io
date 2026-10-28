@@ -1,0 +1,1 @@
+Technology logos: Devicon v2.16.0. Source: https://github.com/devicons/devicon/tree/v2.16.0/icons . Project license: https://github.com/devicons/devicon/blob/v2.16.0/LICENSE . Logos retain their respective brand rights.

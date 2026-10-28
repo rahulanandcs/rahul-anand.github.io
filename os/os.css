@@ -245,7 +245,7 @@ h1 {
 
 h1 span {
   display: block;
-  font-size: .46em;
+  font-size: .35em;
   font-weight: 600;
   letter-spacing: -.03em;
   margin-top: 10px;
@@ -388,7 +388,7 @@ h1 span {
 .desktop-hint {
   text-align: center;
   font-size: 11px;
-  color: #153f53;
+  color: #fdfeff;
   margin: 0;
   text-shadow: 0 1px 5px white;
 }
@@ -553,7 +553,7 @@ h1 span {
 }
 
 .window-body p {
-  max-width: 75ch;
+  /* max-width: 75ch; */
 }
 
 .app-caption {

@@ -1,0 +1,1782 @@
+{
+ "url": "http://127.0.0.1:4173/index.html?tab=about",
+ "at": "2026-10-28T07:35:18.123Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.57
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 220,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "IMG_1180.JPG"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "⚙"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rahul Anand",
+     "words": 2,
+     "chars": 11,
+     "lines": 1,
+     "size": 100,
+     "vw": 6.9,
+     "font": "Nunito",
+     "weight": 700,
+     "tracking": -0.06,
+     "leading": 0.95,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.54,
+     "top": 601,
+     "tag": "h2",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+     "words": 9,
+     "lines": 2,
+     "size": 64.8,
+     "font": "Nunito"
+    },
+    "headings": [
+     {
+      "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+      "words": 9,
+      "chars": 65,
+      "lines": 2,
+      "size": 64.8,
+      "vw": 4.5,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 214,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rahul Anand",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 100,
+      "vw": 6.9,
+      "font": "Nunito",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.54,
+      "top": 601,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Snapshot",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Nunito",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.54,
+      "top": 891,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "99%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 969,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "20K+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 1113,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Open Sans",
+       "share": 0.83,
+       "mono": false
+      },
+      {
+       "family": "Nunito",
+       "share": 0.17,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      18,
+      20,
+      23,
+      32,
+      64,
+      65,
+      100
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "Open Sans",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.4
+     },
+     "measureChars": 59,
+     "max": {
+      "size": 100,
+      "vw": 6.9,
+      "font": "Nunito",
+      "text": "Rahul Anand"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.41,
+     "smallText": 14
+    },
+    "eyebrows": [
+     {
+      "text": "Looking for internships",
+      "above": "Rahul Anand AI systems, fullstack engine",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 11,
+      "top": 130
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#32b6e8",
+       "top": -11,
+       "hsl": {
+        "h": 196,
+        "s": 0.8,
+        "l": 0.55
+       }
+      },
+      {
+       "color": "#effaff",
+       "top": 112,
+       "hsl": {
+        "h": 199,
+        "s": 1,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#f8faf6",
+       "top": 185,
+       "hsl": {
+        "h": 90,
+        "s": 0.29,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#d9ebee",
+       "top": 185,
+       "hsl": {
+        "h": 189,
+        "s": 0.38,
+        "l": 0.89
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#103d54",
+       "share": 0.5
+      },
+      {
+       "color": "#14394e",
+       "share": 0.33
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#fdfeff",
+       "share": 0.05
+      },
+      {
+       "color": "#2d5b1b",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#14394e"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 10,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 5,
+     "withGradient": 5,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to portfolio apps",
+      "Explore My Work ↗",
+      "View Resume",
+      "Snapshot",
+      "Experience"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 13,
+     "shadowOverlay": 6,
+     "shadowSamples": [
+      "span.status → rgba(43, 87, 13, 0.082) 0px 2px 12px 0px",
+      "button.primary → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+      "button → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+      "section.app-cluster → rgba(3, 90, 141, 0.15) 0px 16px 40px 0px, rgb(255, 255, 255) 0px 1px 0px 0px ins"
+     ],
+     "gradients": 4,
+     "scrims": 0,
+     "gradientSamples": [
+      "header.system-bar → linear-gradient(rgba(255, 255, 255, 0.863), rgba(218, 244, 255, 0.7))",
+      "section.app-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))",
+      "section.app-cluster.personal-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))",
+      "div.titlebar → linear-gradient(rgb(255, 255, 255), rgb(212, 240, 255) 55%, rgb(190, 223, 240))"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.system-bar 1440px",
+      "div.titlebar 878px"
+     ],
+     "outlinedBoxes": 6,
+     "dashed": 0,
+     "blurred": 4,
+     "roundedBoxes": 6,
+     "boxRadius": 16,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 8,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 948
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.22
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 48,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "nunito",
+     "open sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 900,
+    "margins": {
+     "left": 186,
+     "right": 186
+    },
+    "sections": [
+     {
+      "sel": "section.welcome",
+      "tag": "section",
+      "top": 130,
+      "height": 239,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rahul Anand",
+       "size": 65,
+       "tag": "h1"
+      },
+      "left": 467,
+      "right": 467,
+      "textLeft": 467,
+      "textRight": 467,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.desktop-groups",
+      "tag": "div",
+      "top": 417,
+      "height": 280,
+      "words": 51,
+      "media": 0,
+      "middle": 86,
+      "heading": {
+       "text": "Explore my work",
+       "size": 15,
+       "tag": "h2"
+      },
+      "left": 180,
+      "right": 180,
+      "textLeft": 186,
+      "textRight": 186,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+      "size": 65,
+      "top": 214,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 186,
+      "n": 1
+     },
+     {
+      "x": 887,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 11,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.72
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1024,
+     "screens": 1,
+     "words": 188,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "IMG_1180.JPG"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "⚙"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rahul Anand",
+     "words": 2,
+     "chars": 11,
+     "lines": 1,
+     "size": 69.1,
+     "vw": 9,
+     "font": "Nunito",
+     "weight": 700,
+     "tracking": -0.06,
+     "leading": 0.95,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.72,
+     "top": 713,
+     "tag": "h2",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+     "words": 9,
+     "lines": 2,
+     "size": 40,
+     "font": "Nunito"
+    },
+    "headings": [
+     {
+      "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+      "words": 9,
+      "chars": 65,
+      "lines": 2,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 164,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rahul Anand",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 69.1,
+      "vw": 9,
+      "font": "Nunito",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.72,
+      "top": 713,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Snapshot",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Nunito",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.72,
+      "top": 973,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "99%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.29,
+      "top": 1051,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "20K+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.29,
+      "top": 1217,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Open Sans",
+       "share": 0.8,
+       "mono": false
+      },
+      {
+       "family": "Nunito",
+       "share": 0.2,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      18,
+      20,
+      32,
+      40,
+      64,
+      69
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Open Sans",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.4
+     },
+     "measureChars": 59,
+     "max": {
+      "size": 69.1,
+      "vw": 9,
+      "font": "Nunito",
+      "text": "Rahul Anand"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.04,
+     "centerShare": 0.33,
+     "smallText": 8
+    },
+    "eyebrows": [
+     {
+      "text": "Looking for internships",
+      "above": "Rahul Anand AI systems, fullstack engine",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 11,
+      "top": 80
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#32b6e8",
+       "top": -13,
+       "hsl": {
+        "h": 196,
+        "s": 0.8,
+        "l": 0.55
+       }
+      },
+      {
+       "color": "#effaff",
+       "top": 174,
+       "hsl": {
+        "h": 199,
+        "s": 1,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#f8faf6",
+       "top": 247,
+       "hsl": {
+        "h": 90,
+        "s": 0.29,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#d9ebee",
+       "top": 247,
+       "hsl": {
+        "h": 189,
+        "s": 0.38,
+        "l": 0.89
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#103d54",
+       "share": 0.59
+      },
+      {
+       "color": "#14394e",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.08
+      },
+      {
+       "color": "#fdfeff",
+       "share": 0.05
+      },
+      {
+       "color": "#2d5b1b",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#14394e"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 10,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 5,
+     "withGradient": 5,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to portfolio apps",
+      "Explore My Work ↗",
+      "View Resume",
+      "Snapshot",
+      "Experience"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 13,
+     "shadowOverlay": 6,
+     "shadowSamples": [
+      "span.status → rgba(43, 87, 13, 0.082) 0px 2px 12px 0px",
+      "button.primary → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+      "button → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+      "section.app-cluster → rgba(3, 90, 141, 0.15) 0px 16px 40px 0px, rgb(255, 255, 255) 0px 1px 0px 0px ins"
+     ],
+     "gradients": 5,
+     "scrims": 0,
+     "gradientSamples": [
+      "header.system-bar → linear-gradient(rgba(255, 255, 255, 0.863), rgba(218, 244, 255, 0.7))",
+      "section.app-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))",
+      "section.app-cluster.personal-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))",
+      "div.titlebar → linear-gradient(rgb(255, 255, 255), rgb(212, 240, 255) 55%, rgb(190, 223, 240))"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.system-bar 768px",
+      "div.titlebar 658px"
+     ],
+     "outlinedBoxes": 6,
+     "dashed": 0,
+     "blurred": 4,
+     "roundedBoxes": 6,
+     "boxRadius": 16,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 8,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1030
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 48,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "nunito",
+     "open sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1024,
+    "margins": {
+     "left": 57,
+     "right": 60
+    },
+    "sections": [
+     {
+      "sel": "section.welcome",
+      "tag": "section",
+      "top": 80,
+      "height": 205,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rahul Anand",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 158,
+      "right": 158,
+      "textLeft": 158,
+      "textRight": 158,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.desktop-groups",
+      "tag": "div",
+      "top": 307,
+      "height": 299,
+      "words": 26,
+      "media": 0,
+      "middle": 56,
+      "heading": {
+       "text": "Explore my work",
+       "size": 15,
+       "tag": "h2"
+      },
+      "left": 57,
+      "right": 57,
+      "textLeft": 63,
+      "textRight": 63,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+      "size": 40,
+      "top": 164,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 63,
+      "n": 1
+     },
+     {
+      "x": 491,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 11,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.99
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 3,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 844,
+     "screens": 1,
+     "words": 198,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "IMG_1180.JPG"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "⚙"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rahul Anand",
+     "words": 2,
+     "chars": 11,
+     "lines": 1,
+     "size": 46.8,
+     "vw": 12,
+     "font": "Nunito",
+     "weight": 700,
+     "tracking": -0.06,
+     "leading": 0.95,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.77,
+     "top": 515,
+     "tag": "h2",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+     "words": 9,
+     "lines": 2,
+     "size": 40,
+     "font": "Nunito"
+    },
+    "headings": [
+     {
+      "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+      "words": 9,
+      "chars": 65,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 153,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Rahul Anand",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 46.8,
+      "vw": 12,
+      "font": "Nunito",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 515,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Snapshot",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Nunito",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 772,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "99%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 64,
+      "vw": 16.4,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 1306,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "20K+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 64,
+      "vw": 16.4,
+      "font": "Nunito",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 1472,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Open Sans",
+       "share": 0.81,
+       "mono": false
+      },
+      {
+       "family": "Nunito",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      11,
+      12,
+      14,
+      16,
+      17,
+      18,
+      32,
+      40,
+      47,
+      64
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Open Sans",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.4
+     },
+     "measureChars": 38,
+     "max": {
+      "size": 64,
+      "vw": 16.4,
+      "font": "Nunito",
+      "text": "99%"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.023,
+     "microSamples": [
+      "COMPUTER SCIENCE @ TEXAS A&M"
+     ],
+     "upperShare": 0.04,
+     "centerShare": 0.37,
+     "smallText": 11
+    },
+    "eyebrows": [
+     {
+      "text": "COMPUTER SCIENCE @ TEXAS A&M",
+      "above": "Rahul Anand AI systems, fullstack engine",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 10,
+      "top": 129
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#32b6e8",
+       "top": 0,
+       "hsl": {
+        "h": 196,
+        "s": 0.8,
+        "l": 0.55
+       }
+      },
+      {
+       "color": "#effaff",
+       "top": 62,
+       "hsl": {
+        "h": 199,
+        "s": 1,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#f8faf6",
+       "top": 129,
+       "hsl": {
+        "h": 90,
+        "s": 0.29,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#d9ebee",
+       "top": 129,
+       "hsl": {
+        "h": 189,
+        "s": 0.38,
+        "l": 0.89
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#103d54",
+       "share": 0.55
+      },
+      {
+       "color": "#14394e",
+       "share": 0.27
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#fdfeff",
+       "share": 0.05
+      },
+      {
+       "color": "#2d5b1b",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#14394e"
+     },
+     "lowContrast": [
+      {
+       "text": "One click to explore. Your next great co",
+       "ratio": 1,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#fdfeff",
+       "bg": "#ffffff"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 9,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 4,
+     "withGradient": 4,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to portfolio apps",
+      "Explore My Work ↗",
+      "View Resume",
+      "Snapshot",
+      "Experience"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 13,
+     "shadowOverlay": 5,
+     "shadowSamples": [
+      "span.status → rgba(43, 87, 13, 0.082) 0px 2px 12px 0px",
+      "button.primary → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+      "button → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+      "section.app-cluster → rgba(3, 90, 141, 0.15) 0px 16px 40px 0px, rgb(255, 255, 255) 0px 1px 0px 0px ins"
+     ],
+     "gradients": 6,
+     "scrims": 0,
+     "gradientSamples": [
+      "header.system-bar → linear-gradient(rgba(255, 255, 255, 0.863), rgba(218, 244, 255, 0.7))",
+      "button.primary → linear-gradient(rgb(105, 217, 255), rgb(18, 136, 215) 48%, rgb(0, 98, 176) 50%, rgb(18, 143, 224))",
+      "section.app-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))",
+      "section.app-cluster.personal-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.system-bar 390px",
+      "div.titlebar 378px"
+     ],
+     "outlinedBoxes": 6,
+     "dashed": 0,
+     "blurred": 4,
+     "roundedBoxes": 11,
+     "boxRadius": 18,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 8,
+     "cardRows": [
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 354
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1285
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 0.31
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 52,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "nunito",
+     "open sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 844,
+    "margins": {
+     "left": 35,
+     "right": 35
+    },
+    "sections": [
+     {
+      "sel": "section.welcome",
+      "tag": "section",
+      "top": 82,
+      "height": 192,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rahul Anand",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.desktop-groups",
+      "tag": "div",
+      "top": 300,
+      "height": 776,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Explore my work",
+       "size": 17,
+       "tag": "h2"
+      },
+      "left": 35,
+      "right": 35,
+      "textLeft": 41,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Rahul Anand AI systems, fullstack engineering, and business tech.",
+      "size": 40,
+      "top": 153,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "02:35 AM",
+      "side": "right",
+      "px": 12
+     }
+    ],
+    "edges": [
+     {
+      "x": 41,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 14,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"Looking for internships\" (pill) above \"Rahul Anand AI systems, fullstack engine\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: ⚙",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "4 gradient fill(s): header.system-bar → linear-gradient(rgba(255, 255, 255, 0.863), rgba(218, 244, 255, 0.7)) | section.app-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28)) | section.app-cluster.personal-cluster → linear-gradient(125deg, rgba(255, 255, 255, 0.533), rgba(225, 248, 255, 0.28))",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "13 box-shadow(s) on elements at rest: span.status → rgba(43, 87, 13, 0.082) 0px 2px 12px 0px | button.primary → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p | button → rgb(255, 255, 255) 0px 1px 2px 0px inset, rgba(0, 80, 131, 0.133) 0px 3px 8px 0p",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "text-shadow",
+   "width": 1440,
+   "message": "8 text-shadow(s).",
+   "fix": "Remove; fix legibility with a scrim or a different crop.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with gradient fill and shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "2 thin rule(s)/divider line(s): header.system-bar 1440px | div.titlebar 878px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "6 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 1440,
+   "message": "4 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "13 different font sizes (10, 11, 12, 14, 15, 16, 18, 20, 23, 32, 64, 65, 100).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 2 picture(s) on the page (2 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "14 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "late-title",
+   "width": 1440,
+   "message": "The title is not readable 1.2s after the page loaded (something lies over it).",
+   "fix": "Put the headline in the HTML, painted on the first frame; the load sequence only adds arrival and is settled by 1.2s (references/motion.md, \"Load sequence in 1.2 seconds\"). No preloader, no gate, no waiting for the load event.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"Rahul Anand AI systems, fullstack engineering, a\" (screen 1, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 4 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 390,
+   "message": "1 tiny uppercase letter-spaced label(s): \"COMPUTER SCIENCE @ TEXAS A&M\"",
+   "fix": "Prefer sentence case at body size."
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 390,
+   "message": "2 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid."
+  },
+  {
+   "level": "FAIL",
+   "id": "contrast",
+   "width": 390,
+   "message": "Unreadable text: \"One click to explore. Your next great co\" 1:1 (#fdfeff on #ffffff)",
+   "fix": "Raise contrast to at least 4.5:1 for text, 3:1 for large display."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  },
+  {
+   "level": "WARN",
+   "id": "edge-text",
+   "width": 390,
+   "message": "1 text block(s) sit 12–15px from the phone's edge: \"02:35 AM\" (12px)",
+   "fix": "The page margin is 16–20px on a phone; the header and the corner labels sit on it too."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/rahulanand/Documents/RahulPortfolioSite/.design-review/before/render/desktop-fold.jpg",
+   "pages": [
+    "/Users/rahulanand/Documents/RahulPortfolioSite/.design-review/before/render/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/rahulanand/Documents/RahulPortfolioSite/.design-review/before/render/tablet-fold.jpg",
+   "pages": [
+    "/Users/rahulanand/Documents/RahulPortfolioSite/.design-review/before/render/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/rahulanand/Documents/RahulPortfolioSite/.design-review/before/render/mobile-fold.jpg",
+   "pages": [
+    "/Users/rahulanand/Documents/RahulPortfolioSite/.design-review/before/render/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
