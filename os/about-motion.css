@@ -1,0 +1,261 @@
+/* Two disciplines, one practice. These panels also work without animation. */
+.about-story-1 .about-story-content {
+  width: 100%;
+  max-width: none;
+}
+.work-duet {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.work-track {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 36px);
+  border-radius: 16px;
+  background: #294a76;
+  color: #fff;
+}
+.work-track-ai {
+  background: #d6edbd;
+  color: #213c29;
+}
+.about-story .work-track-title {
+  margin: 0;
+  font: 650 clamp(64px, 9vw, 96px)/1 'Space Grotesk', sans-serif;
+  letter-spacing: -0.04em;
+  color: inherit;
+}
+.about-story .work-track-intro {
+  margin: 12px 0 28px;
+  font-size: 22px;
+  color: inherit;
+}
+.work-track-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+.work-track-tabs button {
+  min-height: 44px;
+  padding: 10px 12px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  font: 500 14px/1.4 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
+.work-track-tabs button[aria-selected='true'] {
+  border-color: currentColor;
+  background: #ffffff18;
+}
+.work-track-tabs button:hover {
+  background: #ffffff30;
+}
+.work-spotlight-logo {
+  display: block;
+  width: 100%;
+  height: 132px;
+  padding: 25px;
+  background: #fff;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.work-spotlight-copy {
+  min-height: 260px;
+}
+.work-spotlight h4 {
+  margin: 24px 0 8px;
+  color: inherit;
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.about-story .work-spotlight p {
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.work-open {
+  margin-top: 18px;
+  min-height: 44px;
+  padding: 10px 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid currentColor;
+  font: 600 15px/1.4 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
+
+/* The heading occupies its own row, leaving the entire curve clear. */
+.travel-journey {
+  height: 1150px;
+  margin-top: 48px;
+}
+.travel-stage {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: var(--travel-stage-height, 520px);
+  min-height: 0;
+  overflow: hidden;
+}
+.travel-heading {
+  position: static;
+  flex: 0 0 auto;
+  max-width: none;
+  padding: 20px 0 8px;
+}
+.travel-heading p {
+  max-width: none;
+  margin: 0;
+}
+.about-story .travel-heading h3 {
+  margin-bottom: 8px;
+}
+.travel-canvas {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.travel-journey .travel-photo {
+  width: var(--travel-photo-size, 200px);
+  transform: none;
+  margin: 0;
+}
+.travel-frames {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 12px 24px #00000024;
+}
+.travel-journey .travel-frames img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 0;
+}
+.travel-journey .travel-frames img:first-child {
+  opacity: 1;
+}
+.travel-journey .travel-photo figcaption {
+  text-align: center;
+  padding: 10px 4px 0;
+  font-size: 12px;
+}
+.motion-static .travel-journey,
+.motion-static .travel-stage {
+  height: auto;
+}
+.motion-static .travel-canvas {
+  flex: auto;
+}
+.motion-static .travel-journey .travel-photo {
+  position: relative;
+  width: 100%;
+  margin: 24px 0 0;
+  transform: none !important;
+}
+.motion-static .travel-frames {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  aspect-ratio: auto;
+  overflow: visible;
+  border-radius: 0;
+  box-shadow: none;
+}
+.motion-static .travel-journey .travel-frames img {
+  position: static;
+  height: auto;
+  opacity: 1 !important;
+  border-radius: 14px;
+}
+.motion-static .travel-photo figcaption {
+  display: none;
+}
+
+.about-close {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+}
+.about-close .about-close-copy h2 {
+  margin: 0 0 28px;
+  font-size: clamp(36px, 5vw, 62px);
+  max-width: 10ch;
+  line-height: 1.05;
+}
+.closing-graphics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+.animated-graphic {
+  margin: 0;
+  aspect-ratio: 1;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  background: #212339;
+  border-radius: 14px;
+}
+.animated-graphic:nth-child(2) {
+  background: #a0efea;
+  transform: translateY(24px);
+}
+.animated-graphic img,
+.animated-graphic canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1;
+}
+.animated-graphic [hidden] {
+  display: none;
+}
+.graphics-toggle {
+  grid-column: 1 / -1;
+  justify-self: start;
+  min-height: 44px;
+  margin-top: 24px;
+  padding: 10px 14px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #ffffff80;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.graphics-toggle:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+@media (max-width: 700px) {
+  .work-duet,
+  .about-close {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .work-spotlight-copy {
+    min-height: 0;
+  }
+  .about-close .about-close-copy h2 {
+    max-width: 15ch;
+  }
+  .travel-journey {
+    height: 1000px;
+  }
+  .motion-static .travel-frames {
+    gap: 8px;
+  }
+}

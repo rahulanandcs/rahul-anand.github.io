@@ -1,168 +1,197 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#087cca">
-  <meta name="description" content="Explore Rahul Anand's internships, projects, technical skills, design work, and résumé in Rahul OS.">
+<html lang="en" data-theme="studio">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#087cca" />
+    <meta
+      name="description"
+      content="Explore Rahul Anand's internships, projects, technical skills, design work, and résumé in Rahul OS."
+    />
 
-  <title>Rahul Anand's Portfolio</title>
-  <link rel="icon" type="image/png" href="/images/RA_Logo.png?v=2">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="os/os.css">
-  <link rel="stylesheet" href="os/editorial.css">
-  <link rel="stylesheet" href="os/expressive.css">
+    <title>Rahul Anand's Portfolio</title>
+    <link rel="icon" type="image/png" href="/images/RA_Logo.png?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="os/os.css" />
+    <link rel="stylesheet" href="os/editorial.css" />
+    <link rel="stylesheet" href="os/expressive.css" />
+    <link rel="stylesheet" href="os/themes.css?v=desktop-2" />
+    <link rel="stylesheet" href="os/desktop.css?v=desktop-2" />
+    <link rel="stylesheet" href="os/case-study.css?v=desktop-2" />
+    <link rel="stylesheet" href="os/portfolio-cards.css?v=cards-1" />
+    <link rel="stylesheet" href="os/about-motion.css?v=cards-1" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('rahul-os-theme') === 'classic'
+            ? 'classic'
+            : 'studio';
+      } catch {}
+    </script>
 
-  <script src="os/vendor/gsap.min.js" defer></script>
-  <script src="os/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="os/vendor/MorphSVGPlugin.min.js" defer></script>
-  <script src="os/motion.js" defer></script>
-  <script src="os/os.js" defer></script>
-</head>
+    <script src="os/vendor/gsap.min.js" defer></script>
+    <script src="os/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="os/vendor/MorphSVGPlugin.min.js" defer></script>
+    <script src="os/motion.js?v=cards-1" defer></script>
+    <script src="os/os.js?v=cards-1" defer></script>
+  </head>
 
-<body>
-  <div class="wallpaper" aria-hidden="true"></div>
+  <body>
+    <div class="wallpaper" aria-hidden="true"></div>
 
-  <a class="skip-link" href="#work-apps">
-    Skip to portfolio apps
-  </a>
+    <a class="skip-link" href="#work-apps"> Skip to portfolio apps </a>
 
-  <header class="system-bar">
-    <a class="brand" href="index.html">
-      <img src="images/RA_Logo.png" alt="">
-      Rahul <b>OS</b>
-    </a>
+    <header class="system-bar">
+      <a class="brand" href="index.html">
+        <img src="images/RA_Logo.png" alt="" />
+        Rahul <b>OS</b>
+      </a>
 
-    <span class="system-description">
-      A little world of work & wonder.
-    </span>
+      <span class="system-description"> A little world of work & wonder. </span>
 
-    <div class="system-actions">
-      <button data-app="search" aria-label="Search portfolio">
-        ⌕ <span>Search</span>
-      </button>
-
-      <button data-app="settings" aria-label="Open settings">
-        ⚙ <span>Settings</span>
-      </button>
-
-      <time id="clock" aria-label="Your local time"></time>
-    </div>
-  </header>
-
-  <main class="desktop" id="desktop">
-    <section class="welcome">
-      <span class="status">
-        <i></i> Looking for internships
-      </span>
-
-      <p class="eyebrow">
-        COMPUTER SCIENCE @ TEXAS A&M
-      </p>
-
-      <h1>
-        Rahul Anand
-        <span>AI systems, fullstack engineering, and business tech.</span>
-      </h1>
-
-      <p class="intro">
-        <!-- No matter how gifted you are... You, alone, cannot change the world. -->
-      </p>
-
-      <div class="quick-actions">
-        <button class="primary" data-app="internships">
-          Explore My Work <span>↗</span>
+      <div class="system-actions">
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to Windows 7 theme"
+          aria-pressed="false"
+        >
+          <span id="theme-label">Studio Glass</span>
+        </button>
+        <button data-app="search" aria-label="Search portfolio">
+          <svg
+            class="control-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <circle cx="10" cy="10" r="6" />
+            <path d="m15 15 6 6" /></svg
+          ><span>Search</span>
         </button>
 
-        <button data-app="resume">
-          View Resume
+        <button data-app="settings" aria-label="Open settings">
+          <svg
+            class="control-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+            <circle cx="9" cy="6" r="2" />
+            <circle cx="16" cy="12" r="2" />
+            <circle cx="8" cy="18" r="2" /></svg
+          ><span>Settings</span>
         </button>
+
+        <time id="clock" aria-label="Your local time"></time>
       </div>
-    </section>
+    </header>
 
-    <div class="desktop-groups">
-      <section class="app-cluster" aria-labelledby="work-label">
-        <div class="cluster-heading">
-          <h2 id="work-label">Explore my work</h2>
-          <span>05 Applications</span>
+    <main class="desktop" id="desktop">
+      <section class="welcome">
+        <h1 class="bigName">
+          Rahul Anand
+        </h1>
+        <p class="welcome-degree">Computer Science @ Texas A&amp;M</p>
+        <p class="welcome-description">AI systems, fullstack engineering, and business tech.</p>
+        <span class="status"> <i></i> Looking for internships </span>
+
+        <p class="intro">
+          <!-- No matter how gifted you are... You, alone, cannot change the world. -->
+        </p>
+
+        <div class="quick-actions">
+          <button class="primary" data-app="internships">
+            Explore My Work <span>↗</span>
+          </button>
+
+          <button data-app="resume">View Resume</button>
         </div>
-
-        <div
-          class="app-grid work-grid"
-          id="work-apps"
-          tabindex="-1"
-        ></div>
       </section>
 
-      <section
-        class="app-cluster personal-cluster"
-        aria-labelledby="personal-label"
-      >
-        <div class="cluster-heading">
-          <h2 id="personal-label">Get to know me</h2>
-          <span>03 Applications</span>
-        </div>
+      <div class="desktop-groups">
+        <section class="app-cluster" aria-labelledby="work-label">
+          <div class="cluster-heading">
+            <h2 id="work-label">Explore my work</h2>
+            <span>05 Applications</span>
+          </div>
 
-        <div class="app-grid" id="personal-apps"></div>
-      </section>
+          <div class="app-grid work-grid" id="work-apps" tabindex="-1"></div>
+        </section>
+
+        <section
+          class="app-cluster personal-cluster"
+          aria-labelledby="personal-label"
+        >
+          <div class="cluster-heading">
+            <h2 id="personal-label">Get to know me</h2>
+            <span>03 Applications</span>
+          </div>
+
+          <div class="app-grid" id="personal-apps"></div>
+        </section>
+      </div>
+
+      <p class="desktop-hint">
+        One click to explore. Your next great connection starts here.
+      </p>
+
+      <p id="load-error" role="alert" hidden>
+        Content could not load.
+        <button id="retry">Retry</button>
+        or visit
+        <a href="portfolio.html">the full portfolio</a>
+        and
+        <a href="profile.html">profile</a>.
+      </p>
+    </main>
+
+    <div id="windows" aria-label="Open applications"></div>
+
+    <nav class="dock" aria-label="Desktop and open applications">
+      <button id="show-desktop" title="Show desktop">
+        ▦ <span>Desktop</span>
+      </button>
+
+      <div id="tasks"></div>
+
+      <span class="dock-divider"></span>
+
+      <button data-app="search" title="Search">⌕</button>
+
+      <button id="sound" aria-label="Enable sound effects" aria-pressed="false">
+        Sound off
+      </button>
+    </nav>
+
+    <div id="announcement" class="sr-only" role="status"></div>
+
+    <div class="boot" id="boot" hidden>
+      <img src="images/RA_Logo.png" alt="" />
+      <h2>Welcome to Rahul OS</h2>
+      <p>Your window into my work.</p>
+
+      <div class="boot-progress"></div>
+
+      <button id="skip-boot">Enter desktop</button>
+      <small>Portfolio edition · 1.0</small>
     </div>
 
-    <p class="desktop-hint">
-      One click to explore. Your next great connection starts here.
-    </p>
-
-    <p id="load-error" role="alert" hidden>
-      Content could not load.
-      <button id="retry">Retry</button>
-      or visit
-      <a href="portfolio.html">the full portfolio</a>
-      and
-      <a href="profile.html">profile</a>.
-    </p>
-  </main>
-
-  <div id="windows" aria-label="Open applications"></div>
-
-  <nav class="dock" aria-label="Desktop and open applications">
-    <button id="show-desktop" title="Show desktop">
-      ▦ <span>Desktop</span>
-    </button>
-
-    <div id="tasks"></div>
-
-    <span class="dock-divider"></span>
-
-    <button data-app="search" title="Search">⌕</button>
-
-    <button
-      id="sound"
-      aria-label="Enable sound effects"
-      aria-pressed="false"
-    >
-      Sound off
-    </button>
-  </nav>
-
-  <div id="announcement" class="sr-only" role="status"></div>
-
-  <div class="boot" id="boot" hidden>
-    <img src="images/RA_Logo.png" alt="">
-    <h2>Welcome to Rahul OS</h2>
-    <p>Your window into my work.</p>
-
-    <div class="boot-progress"></div>
-
-    <button id="skip-boot">Enter desktop</button>
-    <small>Portfolio edition · 1.0</small>
-  </div>
-
-  <noscript>
-    <div class="no-script">
-      JavaScript powers this desktop. You can still browse
-      <a href="portfolio.html">my full portfolio</a>
-      or
-      <a href="profile.html">my profile</a>.
-    </div>
-  </noscript>
-</body>
+    <noscript>
+      <div class="no-script">
+        JavaScript powers this desktop. You can still browse
+        <a href="portfolio.html">my full portfolio</a>
+        or
+        <a href="profile.html">my profile</a>.
+      </div>
+    </noscript>
+  </body>
 </html>

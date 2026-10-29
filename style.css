@@ -4,6 +4,16 @@
   src: url('Inter/Inter-VariableFont_opsz\,wght.ttf');
 }
 
+@font-face {
+  font-family: 'Silly';
+  src: url('Inter/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Code';
+  src: url('Inter/JetBrains_Mono/static/JetBrainsMono-Regular.ttf');
+}
+
 :root {
   --neon-blue: #77d5ed;
   --neon-pink: #ffcce7;

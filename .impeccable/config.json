@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "files": [
+          "os/portfolio-cards.css"
+        ],
+        "createdAt": "2026-10-29T04:25:55.345Z",
+        "reason": "User explicitly requested Space Grotesk for Built with, Overview, Highlights, and A closer look labels."
+      }
+    ]
+  }
+}

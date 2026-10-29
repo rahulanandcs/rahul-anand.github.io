@@ -1,0 +1,145 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "horizontalOverflow": false,
+    "desktopDockGap": 20,
+    "subtitleStatusGap": 20,
+    "statusActionsGap": 22,
+    "logoLoaded": true,
+    "theme": "studio"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "horizontalOverflow": false,
+    "desktopDockGap": 34,
+    "subtitleStatusGap": 20,
+    "statusActionsGap": 22,
+    "logoLoaded": true,
+    "theme": "classic"
+  },
+  {
+    "width": 1440,
+    "detail": {
+      "title": "DriveDrop",
+      "windowDockGap": 73,
+      "bodyOverflow": false,
+      "sections": [
+        "Overview",
+        "Highlights",
+        "A closer look"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "horizontalOverflow": false,
+    "desktopDockGap": 20,
+    "subtitleStatusGap": 16,
+    "statusActionsGap": 16,
+    "logoLoaded": true,
+    "theme": "studio"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "horizontalOverflow": false,
+    "desktopDockGap": 34,
+    "subtitleStatusGap": 16,
+    "statusActionsGap": 16,
+    "logoLoaded": true,
+    "theme": "classic"
+  },
+  {
+    "width": 1280,
+    "detail": {
+      "title": "DriveDrop",
+      "windowDockGap": 40.5,
+      "bodyOverflow": false,
+      "sections": [
+        "Overview",
+        "Highlights",
+        "A closer look"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "horizontalOverflow": false,
+    "desktopDockGap": 20,
+    "subtitleStatusGap": 20,
+    "statusActionsGap": 22,
+    "logoLoaded": true,
+    "theme": "studio"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "horizontalOverflow": false,
+    "desktopDockGap": 34,
+    "subtitleStatusGap": 20,
+    "statusActionsGap": 22,
+    "logoLoaded": true,
+    "theme": "classic"
+  },
+  {
+    "width": 768,
+    "detail": {
+      "title": "DriveDrop",
+      "windowDockGap": 135,
+      "bodyOverflow": false,
+      "sections": [
+        "Overview",
+        "Highlights",
+        "A closer look"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "desktopDockGap": 26,
+    "subtitleStatusGap": 20,
+    "statusActionsGap": 22,
+    "logoLoaded": true,
+    "theme": "studio"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "desktopDockGap": 36,
+    "subtitleStatusGap": 20,
+    "statusActionsGap": 22,
+    "logoLoaded": true,
+    "theme": "classic"
+  },
+  {
+    "width": 390,
+    "detail": {
+      "title": "DriveDrop",
+      "windowDockGap": 12,
+      "bodyOverflow": false,
+      "sections": [
+        "Overview",
+        "Highlights",
+        "A closer look"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "reducedMotion": {
+      "titleVisible": true,
+      "overviewVisible": true,
+      "staticView": true
+    }
+  }
+]

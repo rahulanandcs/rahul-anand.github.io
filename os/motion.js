@@ -141,11 +141,66 @@
         });
       }
       listen(document, 'visibilitychange', syncMarquee);
+      const graphics = $('.closing-graphics', root);
+      let graphicsVisible = false;
+      let graphicsObserver;
+      const graphicStates = all('.animated-graphic', root).map((figure) => ({
+        image: $('img', figure),
+        canvas: $('canvas', figure),
+        ready: false,
+      }));
+      const syncGraphics = () => {
+        if (!graphics) return;
+        const playing = alive && graphicsVisible && !suspended && !document.hidden
+          && !noMotion() && graphics.dataset.paused !== 'true';
+        const toggle = $('.graphics-toggle', graphics);
+        toggle.disabled = noMotion();
+        toggle.textContent = noMotion() ? 'Motion reduced' : graphics.dataset.paused === 'true'
+          ? 'Play animations' : 'Pause animations';
+        graphicStates.forEach((state) => {
+          const { image, canvas } = state;
+          if ((playing || (graphicsVisible && !state.ready)) && !image.hasAttribute('src')) {
+            image.src = image.dataset.animationSrc;
+          }
+          image.hidden = !playing || !state.ready;
+          canvas.hidden = playing && state.ready;
+          if (!playing && state.ready) image.removeAttribute('src');
+        });
+      };
+      graphicStates.forEach((state) => {
+        listen(state.image, 'load', () => {
+          if (!alive || !state.image.naturalWidth) return;
+          const { canvas, image } = state;
+          canvas.width = 800;
+          canvas.height = Math.round(800 * image.naturalHeight / image.naturalWidth);
+          canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+          state.ready = true;
+          syncGraphics();
+        });
+      });
+      if (graphics) {
+        graphicsObserver = new IntersectionObserver(([entry]) => {
+          graphicsVisible = entry.isIntersecting;
+          syncGraphics();
+        }, { root, rootMargin: '80px' });
+        graphicsObserver.observe(graphics);
+        listen(graphics, 'graphics-toggle', syncGraphics);
+      }
+      listen(document, 'visibilitychange', syncGraphics);
+      listen(root, 'work-selection', (event) => {
+        if (!gsap || noMotion() || suspended || !context) return;
+        context.add(() => {
+          gsap.fromTo(event.target, { y: 14, opacity: 0.35 }, {
+            y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', overwrite: true,
+          });
+        });
+      });
       const setup = () => {
         context?.revert();
         marquee = null;
         morph = null;
         root.classList.toggle('motion-static', noMotion() || !gsap);
+        syncGraphics();
         if (!gsap || noMotion() || suspended) return;
         context = gsap.context(() => {
           const title = $('.about-title', root);
@@ -182,14 +237,14 @@
                 },
               });
               all('.about-story', root).forEach((section) => {
-                gsap.from(
+                gsap.fromTo(
                   all(
-                    'h2, h3, p, li, .metric-card, .about-photo-strip img',
+                    'h2, h3, p, li, .metric-card',
                     section,
                   ),
+                  { y: 24 },
                   {
-                    y: 24,
-                    autoAlpha: 0,
+                    y: 0,
                     stagger: 0.055,
                     duration: 0.75,
                     ease: 'power3.out',
@@ -202,18 +257,74 @@
                   },
                 );
               });
-              gsap.from('.about-photo-strip img', {
-                rotation: (i) => (i - 1) * 5,
-                y: 35,
-                stagger: 0.1,
-                ease: 'power3.out',
-                scrollTrigger: {
-                  trigger: $('.about-photo-strip', root),
-                  scroller: root,
-                  start: 'top 90%',
-                  once: true,
-                },
+              all('.work-track', root).forEach((panel, index) => {
+                gsap.from(panel, {
+                  x: index === 0 ? -24 : 24,
+                  duration: 0.9,
+                  ease: 'power3.out',
+                  scrollTrigger: {
+                    trigger: panel,
+                    scroller: root,
+                    start: 'top 90%',
+                    once: true,
+                  },
+                });
               });
+              const journey = $('.travel-journey', root);
+              if (journey) {
+                const stage = $('.travel-stage', journey);
+                const canvas = $('.travel-canvas', journey);
+                const path = $('.travel-route path', journey);
+                const photo = $('.travel-photo', journey);
+                const images = all('.travel-frames img', photo);
+                const caption = $('figcaption', photo);
+                const photos = JSON.parse(journey.dataset.photos);
+                const state = { progress: 0 };
+                const length = path.getTotalLength();
+                const setX = gsap.quickSetter(photo, 'x', 'px');
+                const setY = gsap.quickSetter(photo, 'y', 'px');
+                const setRotation = gsap.quickSetter(photo, 'rotation', 'deg');
+                const setOpacity = images.map((image) => gsap.quickSetter(image, 'opacity'));
+                let width, height, photoWidth, photoHeight;
+                const measure = () => {
+                  journey.style.setProperty('--travel-stage-height', Math.min(580, root.clientHeight - 24) + 'px');
+                  width = canvas.clientWidth;
+                  height = canvas.clientHeight;
+                  const size = Math.min(240, width * 0.4, height - 90);
+                  journey.style.setProperty('--travel-photo-size', Math.max(80, size) + 'px');
+                  photoWidth = photo.offsetWidth;
+                  photoHeight = photo.offsetHeight;
+                };
+                const render = () => {
+                  const point = path.getPointAtLength(state.progress * length);
+                  const padding = 20;
+                  setX(gsap.utils.clamp(padding, Math.max(padding, width - photoWidth - padding), point.x / 1000 * width - photoWidth / 2));
+                  setY(gsap.utils.clamp(padding, Math.max(padding, height - photoHeight - padding), point.y / 640 * height - photoHeight / 2));
+                  setRotation(Math.sin(state.progress * Math.PI * 2) * 7);
+                  const phase = state.progress * (images.length - 1);
+                  // Three already-loaded square photos crossfade without changing layout.
+                  setOpacity.forEach((set, i) => set(Math.max(0, 1 - Math.abs(i - phase))));
+                  caption.textContent = photos[Math.round(phase)].country + ' · Through my lens';
+                };
+                measure();
+                gsap.to(state, {
+                  progress: 1,
+                  ease: 'none',
+                  onUpdate: render,
+                  scrollTrigger: {
+                    trigger: journey,
+                    scroller: root,
+                    start: 'top top',
+                    end: () => '+=' + Math.max(1, journey.offsetHeight - stage.offsetHeight),
+                    scrub: 0.6,
+                    onRefresh: () => {
+                      measure();
+                      render();
+                    },
+                  },
+                });
+                render();
+              }
             }
             if (MorphSVGPlugin)
               morph = gsap.to('.portrait-mask-art path', {
@@ -246,11 +357,10 @@
                 '<.1',
               );
             if (ScrollTrigger)
-              all('.story-copy > *, .story-media > *', root).forEach((item) => {
+              all('.story-section, .story-highlight-list li', root).forEach((item) => {
                 gsap.from(item, {
-                  y: 24,
-                  autoAlpha: 0,
-                  duration: 0.65,
+                  y: item.matches('li') ? 18 : 40,
+                  duration: 0.85,
                   ease: 'power3.out',
                   scrollTrigger: {
                     trigger: item,
@@ -307,6 +417,7 @@
       win.animation = {
         pause() {
           suspended = true;
+          syncGraphics();
           positionTween?.kill();
           context?.revert();
           context = null;
@@ -329,6 +440,8 @@
         alive = false;
         events.abort();
         resize.disconnect();
+        graphicsObserver?.disconnect();
+        graphicStates.forEach(({ image }) => image.removeAttribute('src'));
         positionTween?.kill();
         context?.revert();
         win.animation = null;

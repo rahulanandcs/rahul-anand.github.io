@@ -1,0 +1,565 @@
+/* Portfolio cards and case-study refinements. Keep authoring values readable. */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../Inter/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Code';
+  src: url('../Inter/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Silly';
+  src: url('../Inter/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+[data-theme='studio'] .wallpaper {
+  background: #b3c8e3 url('minimalistBG.jpg') center / cover;
+}
+[data-theme='studio'] .wallpaper::before,
+[data-theme='studio'] .wallpaper::after {
+  display: none;
+}
+.welcome .welcome-degree,
+.welcome .welcome-description {
+  order: 0;
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: none;
+}
+.welcome .welcome-degree {
+  margin-top: 16px;
+  font: 600 clamp(18px, 1.7vw, 24px)/1.5 'Space Grotesk', sans-serif;
+}
+.welcome .welcome-description {
+  margin-top: 6px;
+  font-size: clamp(14px, 1.25vw, 18px);
+  max-width: 54ch;
+}
+[data-theme='classic'] .welcome-degree,
+[data-theme='classic'] .welcome-description {
+  color: #fff;
+  text-shadow: 0 1px 4px #0009;
+}
+.poster-collection {
+  container-type: inline-size;
+  gap: 22px;
+}
+.poster-collection .playing-card,
+[data-theme='studio'] .poster-collection .playing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 310px;
+  aspect-ratio: 1.3;
+  padding: 28px;
+  color: #fff;
+  background: var(--card-color);
+  border: 0;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: none;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.poster-collection .playing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px #00000026;
+}
+.playing-card .card-category {
+  position: absolute;
+  top: 26px;
+  left: 28px;
+  font: 500 14px/1.3 'Space Grotesk', sans-serif;
+}
+.playing-card .card-symbol {
+  position: absolute;
+  top: 72px;
+  left: 28px;
+  width: 38px;
+  height: 38px;
+  color: #ffffffd9;
+}
+.card-symbol svg {
+  width: 100%;
+  height: 100%;
+}
+.playing-card .tile-art {
+  position: absolute;
+  inset: 54px 28px auto auto;
+  display: grid;
+  place-items: center;
+  width: 53%;
+  height: 130px;
+  min-height: 0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 24px #00000030;
+  overflow: visible;
+  transform: rotate(-4deg);
+  transition: transform 350ms ease;
+}
+.playing-card:hover .tile-art {
+  transform: rotate(0deg) translateY(-3px);
+}
+.playing-card .tile-art > img,
+.playing-card .tile-art > .tile-logo {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: 16px;
+  object-fit: contain;
+  border-radius: 14px;
+  transform: none;
+}
+.playing-card .tile-art > img:not(.tile-logo) {
+  object-fit: cover;
+  padding: 0;
+}
+.playing-card.codegana .tile-art > .tile-logo {
+  width: 86%;
+  padding: 12px;
+}
+.playing-card .file-text {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+}
+.playing-card .file-text strong,
+[data-theme='studio'] .playing-card .file-text strong {
+  display: block;
+  font: 650 clamp(27px, 3.8cqw, 40px)/1.08 'Portfolio Inter', sans-serif;
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin: 0;
+  max-width: 15ch;
+  text-wrap: balance;
+}
+.playing-card .file-text small,
+[data-theme='studio'] .playing-card .file-text small {
+  display: block;
+  color: #fff;
+  font: 400 14px/1.5 'Space Grotesk', sans-serif;
+  margin-top: 9px;
+}
+.playing-card .typographic-cover {
+  font-size: 23px;
+  padding: 20px;
+  color: #21384f;
+}
+
+/* Metadata uses the requested Space Grotesk “Code” voice. */
+.detail-surface .story-section h3,
+.detail-surface .story-metadata dt {
+  font-family: 'Code', 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+.story-dates {
+  font-size: 16px;
+  font-weight: 500;
+}
+.technology-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.technology-pill {
+  --pill-bg: #e0e7f1;
+  --pill-ink: #263f62;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 24px;
+  background: var(--pill-bg);
+  color: var(--pill-ink);
+  font: 500 13px/1.4 'Space Grotesk', sans-serif;
+  white-space: nowrap;
+}
+.technology-pill img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 0;
+}
+.technology-mark {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 22px;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  background: #ffffff80;
+}
+.technology-react { --pill-bg: #d1eff6; --pill-ink: #145066; }
+.technology-typescript { --pill-bg: #dbeafa; --pill-ink: #174b7b; }
+.technology-python { --pill-bg: #f4ebc3; --pill-ink: #58481d; }
+.technology-firebase,
+.technology-html { --pill-bg: #f9e2cc; --pill-ink: #793d15; }
+.technology-javascript { --pill-bg: #f5edb5; --pill-ink: #55470e; }
+.technology-css { --pill-bg: #dbeafa; --pill-ink: #1b4d80; }
+.technology-opencv,
+.technology-pycoral { --pill-bg: #dcefdc; --pill-ink: #285934; }
+.technology-figma,
+.technology-neuralseek { --pill-bg: #e7dff4; --pill-ink: #533775; }
+
+.detail-surface .story-media {
+  display: block;
+}
+.detail-surface .story-media > h3 {
+  margin: 0 0 28px;
+}
+.detail-surface .story-evidence {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+.story-evidence > :only-child,
+.story-evidence > video,
+.story-evidence > .image-button:has(.flint-team-photo) {
+  grid-column: 1 / -1;
+}
+.detail-surface .story-evidence .image-button {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 0;
+  padding: 20px;
+}
+.detail-surface .story-evidence img {
+  width: 100%;
+  max-height: 520px;
+}
+.detail-surface .story-evidence img[src*='CGmascot'] {
+  max-width: 160px;
+  max-height: 190px;
+}
+.detail-surface .story-evidence img[src*='codeganaLogo'] {
+  max-width: 300px;
+  max-height: 190px;
+}
+.story-evidence .media-placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.45;
+  margin: 0;
+  border-radius: 14px;
+  padding: 28px;
+  background: #e2e8ef;
+  color: #43566d;
+  text-align: center;
+  font: 500 16px/1.5 'Space Grotesk', sans-serif;
+}
+@media (max-width: 600px) {
+  .poster-collection {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .poster-collection .playing-card,
+  [data-theme='studio'] .poster-collection .playing-card {
+    min-height: 290px;
+    padding: 24px;
+  }
+  .playing-card .file-text strong,
+  [data-theme='studio'] .playing-card .file-text strong {
+    font-size: 32px;
+  }
+  .detail-surface .story-evidence {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .playing-card,
+  .playing-card .tile-art {
+    transition: none !important;
+  }
+}
+
+/* Studio artwork follows its own proportions rather than a white backing tile. */
+[data-theme='studio'] .playing-card .tile-art {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  overflow: hidden;
+  border-radius: 12px;
+}
+[data-theme='studio'] .playing-card .tile-art > img {
+  position: static;
+  inset: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: drop-shadow(0 8px 8px #0003);
+}
+/* Windows 7 uses Explorer-style image previews and a glossy caption pane. */
+[data-theme='classic'] .poster-collection .playing-card {
+  display: grid;
+  grid-template-rows: 180px auto;
+  min-height: 280px;
+  aspect-ratio: auto;
+  padding: 16px;
+  gap: 16px;
+  border: 1px solid #88adc5;
+  border-radius: 7px;
+  background: linear-gradient(#f9fdff, #e7f3fb 62%, #c5e1f1);
+  color: #173c57;
+  box-shadow: inset 0 1px 0 #fff;
+}
+[data-theme='classic'] .playing-card .card-category,
+[data-theme='classic'] .playing-card .card-symbol {
+  display: none;
+}
+[data-theme='classic'] .playing-card .tile-art {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 180px;
+  background: transparent;
+  border-radius: 4px;
+  transform: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+[data-theme='classic'] .playing-card .tile-art > img {
+  position: static;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+[data-theme='classic'] .playing-card .file-text strong {
+  color: #173c57;
+  font: 600 23px/1.2 'Segoe UI', sans-serif;
+  max-width: none;
+  letter-spacing: normal;
+}
+[data-theme='classic'] .playing-card .file-text small {
+  color: #33566d;
+  font-family: 'Segoe UI', sans-serif;
+}
+[data-theme='classic'] .playing-card:hover {
+  background: linear-gradient(#fff, #d5edfc 62%, #abd5f0);
+  border-color: #438dbc;
+  transform: none;
+}
+[data-theme='studio'] .contact-email-address {
+  display: none;
+}
+[data-theme='studio'] .window-body:has(.contact-heading) {
+  padding: clamp(24px, 5vw, 56px);
+}
+[data-theme='studio'] .contact-heading {
+  font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -0.035em;
+  margin: 8px 0 20px;
+}
+[data-theme='studio'] .contact-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 36px 0;
+}
+[data-theme='studio'] .contact-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  border: 0;
+  border-radius: 14px;
+  background: #dce7f180;
+  color: #20374e;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  [data-theme='studio'] .contact-links {
+    grid-template-columns: 1fr;
+  }
+  [data-theme='studio'] .contact-links a {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Selected logos need a light surface for their original lettering. */
+[data-theme='studio'] .playing-card,
+[data-theme='studio'] .playing-card .file-text,
+[data-theme='studio'] .playing-card .file-text strong,
+[data-theme='studio'] .playing-card .file-text small,
+[data-theme='studio'] .playing-card .card-symbol {
+  color: var(--card-ink, #fff);
+}
+[data-theme='studio'] .playing-card .tile-art.logo-panel,
+[data-theme='classic'] .playing-card .tile-art.logo-panel {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+}
+[data-theme='studio'] .playing-card .tile-art.logo-panel {
+  box-shadow: 0 8px 18px #00000024;
+}
+[data-theme='studio'] .playing-card .tile-art.logo-panel > img,
+[data-theme='classic'] .playing-card .tile-art.logo-panel > img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+  object-fit: contain;
+  filter: none;
+}
+/* Image-led design previews show the artwork at a useful size. */
+[data-theme='studio'] .poster-collection .image-led-card {
+  display: grid;
+  grid-template-rows: 220px auto;
+  gap: 24px;
+  aspect-ratio: auto;
+  padding: 20px;
+}
+[data-theme='studio'] .image-led-card .card-category,
+[data-theme='studio'] .image-led-card .card-symbol {
+  display: none;
+}
+[data-theme='studio'] .image-led-card .tile-art {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+}
+[data-theme='studio'] .image-led-card .tile-art > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+}
+[data-theme='studio'] .image-led-card .file-text strong {
+  font-size: clamp(25px, 3.5cqw, 34px);
+}
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.resume-actions .pill {
+  min-height: 48px;
+  padding: 13px 22px;
+  font-size: 16px;
+}
+.education-summary {
+  padding: clamp(24px, 4vw, 44px);
+  background: #dbe4ea;
+  color: #1c2b39;
+}
+.education-summary h3 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+}
+.education-summary .education-degree {
+  margin: 0;
+  font-size: 22px;
+}
+.education-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 32px 0 0;
+}
+.education-facts dt {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #455766;
+}
+.education-facts dd {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .education-facts {
+    grid-template-columns: 1fr;
+  }
+}
+[data-theme='studio'] .playing-card .card-category {
+  color: var(--card-ink, #fff);
+}
+[data-theme='classic'] .poster-collection .playing-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+[data-theme='studio'] .image-led-card .tile-art > img:not(.tile-logo) {
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .poster-collection .playing-card,
+  [data-theme='studio'] .poster-collection .playing-card {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: auto;
+  }
+  [data-theme='studio'] .playing-card .tile-art {
+    right: 24px;
+    width: 58%;
+  }
+  [data-theme='studio'] .image-led-card .tile-art {
+    right: auto;
+    width: 100%;
+  }
+}
+
+/* Bound replaced images explicitly: their intrinsic height must not grow the grid row. */
+[data-theme='studio'] .playing-card .tile-art.activity-art,
+[data-theme='classic'] .playing-card .tile-art.activity-art {
+  display: block;
+  width: 160px;
+  height: 160px;
+  max-width: 58%;
+}
+[data-theme='classic'] .playing-card .tile-art.activity-art {
+  width: 180px;
+  height: 180px;
+  max-width: 100%;
+  justify-self: center;
+}
+[data-theme] .playing-card .tile-art.activity-art > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  filter: none;
+}
+
+/* Grid tracks, rather than the minimum height/aspect ratio, determine card width. */
+.poster-collection .playing-card,
+[data-theme='studio'] .poster-collection .playing-card {
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: auto;
+}
+[data-theme='studio'] .poster-collection .playing-card {
+  min-height: 340px;
+}

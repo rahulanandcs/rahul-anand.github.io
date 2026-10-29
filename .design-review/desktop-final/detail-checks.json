@@ -1,0 +1,134 @@
+[
+  {
+    "requiredAssetsLoaded": true
+  },
+  {
+    "title": "DriveDrop",
+    "horizontalOverflow": false,
+    "paragraphs": 3,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "NeuralSeek",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "TechMeKid",
+    "horizontalOverflow": false,
+    "paragraphs": 3,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "CodeGana",
+    "horizontalOverflow": false,
+    "paragraphs": 4,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "FLINT Autonomous Vehicle",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Verses & Vibes",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Figma Prototyping",
+    "horizontalOverflow": false,
+    "paragraphs": 1,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Canva Designs",
+    "horizontalOverflow": false,
+    "paragraphs": 1,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Through my lens",
+    "horizontalOverflow": false,
+    "paragraphs": 0,
+    "gallery": true,
+    "mastheadLayout": null
+  },
+  {
+    "title": "Marcus High School",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Marcus DECA",
+    "horizontalOverflow": false,
+    "paragraphs": 3,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Social Studies UIL",
+    "horizontalOverflow": false,
+    "paragraphs": 3,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Academic Decathlon",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Marcus Stocks Club",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Marcus JV Tennis",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Schoolhouse.world",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Camp Invention",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "title": "Siddhi Hanuman Temple",
+    "horizontalOverflow": false,
+    "paragraphs": 2,
+    "gallery": false,
+    "mastheadLayout": "grid"
+  },
+  {
+    "errors": []
+  }
+]

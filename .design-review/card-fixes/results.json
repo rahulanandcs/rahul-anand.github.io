@@ -1,0 +1,366 @@
+[
+  {
+    "theme": "studio",
+    "width": 1440,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "CodeGana",
+        "color": "rgb(178, 243, 75)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/codeganaLogoWide.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "FLiNT",
+        "color": "rgb(86, 94, 104)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/FLiNTLogo.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Verses & Vibes",
+        "color": "rgb(76, 54, 102)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/versesAndVibesLogo1.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "theme": "studio",
+    "width": 1440,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "Figma Prototyping",
+        "color": "rgb(84, 61, 128)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/mcaPreview.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Canva Designs",
+        "color": "rgb(0, 108, 118)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/MahaShivaratriHT.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Instagram Photography",
+        "color": "rgb(133, 61, 100)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/jp1.jpg",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "errors": []
+  },
+  {
+    "theme": "classic",
+    "width": 1440,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "CodeGana",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/codeganaLogoWide.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "FLiNT",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/FLiNTLogo.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Verses & Vibes",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/versesAndVibesLogo1.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "theme": "classic",
+    "width": 1440,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "Figma Prototyping",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/mcaPreview.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Canva Designs",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/MahaShivaratriHT.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Instagram Photography",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/jp1.jpg",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "errors": []
+  },
+  {
+    "theme": "studio",
+    "width": 390,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "CodeGana",
+        "color": "rgb(178, 243, 75)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/codeganaLogoWide.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "FLiNT",
+        "color": "rgb(86, 94, 104)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/FLiNTLogo.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Verses & Vibes",
+        "color": "rgb(76, 54, 102)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/versesAndVibesLogo1.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "theme": "studio",
+    "width": 390,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "Figma Prototyping",
+        "color": "rgb(84, 61, 128)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/mcaPreview.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Canva Designs",
+        "color": "rgb(0, 108, 118)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/MahaShivaratriHT.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Instagram Photography",
+        "color": "rgb(133, 61, 100)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/jp1.jpg",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "errors": []
+  },
+  {
+    "theme": "classic",
+    "width": 390,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "CodeGana",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/codeganaLogoWide.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "FLiNT",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/FLiNTLogo.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Verses & Vibes",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/versesAndVibesLogo1.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "theme": "classic",
+    "width": 390,
+    "overflow": false,
+    "cards": [
+      {
+        "title": "Figma Prototyping",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/mcaPreview.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Canva Designs",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/MahaShivaratriHT.png",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "title": "Instagram Photography",
+        "color": "rgba(0, 0, 0, 0)",
+        "mascots": 0,
+        "images": [
+          {
+            "src": "images/jp1.jpg",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "errors": []
+  }
+]

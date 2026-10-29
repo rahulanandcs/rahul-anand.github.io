@@ -1,0 +1,475 @@
+/* Desktop material system. This file owns shell appearance in both modes. */
+:root {
+  --ui-accent: #2854d7;
+  --glass-blue: #2854d7;
+  --logo-green: #b0f54b;
+  --glass-rim: #ffffffa8;
+  --glass-panel: #edf4ff54;
+  --glass-shadow: 0 18px 46px #15253824;
+}
+
+/* Layout is shared so a theme change cannot collapse the vertical rhythm. */
+.desktop,
+[data-theme='studio'] .desktop {
+  display: flex;
+  justify-content: flex-start;
+  max-width: none;
+  gap: 0;
+  position: absolute;
+  inset: var(--bar) 0 calc(var(--dock) + 16px);
+  height: auto;
+  margin: 0;
+  padding: 40px 5vw 28px;
+  scroll-padding-bottom: 28px;
+}
+.welcome {
+  flex-shrink: 0;
+  margin: auto 0 38px;
+}
+.welcome h1 {
+  letter-spacing: -0.04em;
+}
+.welcome span {
+  margin-top: 16px;
+  line-height: 1.45;
+}
+.welcome .status,
+[data-theme='studio'] .welcome .status {
+  margin: 20px 0 22px;
+  min-height: 28px;
+  line-height: 1.4;
+}
+.welcome .quick-actions,
+[data-theme='studio'] .welcome .quick-actions {
+  margin: 0;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.bigName {
+  font-family: "Code";
+}
+.quick-actions button {
+  min-height: 44px;
+}
+.desktop-groups {
+  max-width: 1280px;
+  gap: 28px;
+  flex-shrink: 0;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
+}
+.app-cluster,
+[data-theme='studio'] .app-cluster {
+  padding: 24px 18px 22px;
+  border-radius: 20px;
+}
+.cluster-heading,
+[data-theme='studio'] .cluster-heading {
+  padding: 0 8px 20px;
+}
+.cluster-heading h2 {
+  font-size: 16px;
+}
+.cluster-heading span {
+  font-size: 13px;
+  opacity: 1;
+}
+.app-grid {
+  gap: 8px;
+  align-items: start;
+}
+.app-button,
+[data-theme='studio'] .app-button {
+  padding: 12px 6px;
+  gap: 10px;
+  border-radius: 8px;
+}
+.app-button strong,
+[data-theme='studio'] .app-button strong {
+  font-size: 13px;
+  line-height: 1.45;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-button small,
+[data-theme='studio'] .app-button small {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #304458;
+  max-width: 17ch;
+}
+.desktop-hint,
+[data-theme='studio'] .desktop-hint {
+  margin: 28px 0 auto;
+  padding: 0 12px;
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.classic-icon {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.app-art,
+[data-theme='studio'] .app-art {
+  width: 64px;
+  height: 64px;
+}
+.individual-icon .classic-icon,
+.individual-icon .studio-icon {
+  display: none !important;
+}
+
+/* Studio Glass: a blue-gray field with broad folded surfaces behind the glass.
+   The backdrop is deliberately visible through panels, rims and system chrome. */
+[data-theme='studio'] .wallpaper {
+  background:
+    radial-gradient(ellipse at 15% 5%, #edf3f8 0, transparent 55%),
+    linear-gradient(130deg, #b4c2d2 10%, #97adc7 54%, #647cae);
+  overflow: hidden;
+}
+[data-theme='studio'] .wallpaper::before {
+  content: '';
+  position: absolute;
+  width: 130vw;
+  height: 70vh;
+  left: -28vw;
+  bottom: -43vh;
+  border-radius: 50%;
+  transform: rotate(-24deg);
+  background: linear-gradient(160deg, #cbd8eb, #5a77ad 56%, #2449a2);
+  box-shadow: inset 0 2px 2px #f7fbff80, 0 -28px 70px #25375618;
+}
+[data-theme='studio'] .wallpaper::after {
+  display: block;
+  content: '';
+  position: absolute;
+  inset: auto -35vw -59vh auto;
+  width: 110vw;
+  height: 100vh;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  background: linear-gradient(150deg, #d9e3ed, #a6b7ce 50%, #627fa9);
+  box-shadow: inset 0 2px 2px #ffffffa0, 0 -16px 60px #18294218;
+}
+[data-theme='studio'] .system-bar {
+  background: #e7eff85c;
+  border-bottom: 1px solid #ffffff80;
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+}
+[data-theme='studio'] h1 {
+  font-size: clamp(44px, 5.4vw, 76px);
+  color: #182d43;
+  font-weight: 650;
+}
+[data-theme='studio'] h1 span {
+  color: #2d425c;
+  font-size: clamp(16px, 1.55vw, 22px);
+}
+[data-theme='studio'] .welcome .status {
+  color: #263d28;
+  background: #d9fbb186;
+  padding: 6px 14px;
+  border: 1px solid #e8ffd6a1;
+}
+[data-theme='studio'] .status i {
+  background: #457c12;
+}
+[data-theme='studio'] button,
+[data-theme='studio'] .pill {
+  background: #eaf2fd70;
+  border: 1px solid #ffffff90;
+  box-shadow: inset 0 1px 0 #fff9, 0 4px 12px #15253810;
+}
+[data-theme='studio'] .primary {
+  color: #fff;
+  background: linear-gradient(#4873e5, #2854c5);
+  border-color: #7899f0;
+}
+[data-theme='studio'] .primary:hover {
+  background: #234bb9;
+}
+[data-theme='studio'] .system-actions button {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+[data-theme='studio'] .app-cluster {
+  background: linear-gradient(125deg, #f7fbff69, #e4effc24);
+  border: 1px solid var(--glass-rim);
+  box-shadow: inset 0 1px 0 #ffffffa0, var(--glass-shadow);
+  backdrop-filter: blur(24px) saturate(130%);
+  -webkit-backdrop-filter: blur(24px) saturate(130%);
+}
+[data-theme='studio'] .cluster-heading span {
+  color: #304458;
+  font-size: 13px;
+}
+[data-theme='studio'] .app-button {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+[data-theme='studio'] .app-button:hover {
+  background: #f1f7ff54;
+  border-color: #ffffff90;
+}
+[data-theme='studio'] .app-art {
+  padding: 13px;
+  border-radius: 18px;
+  color: #f3f7ff;
+  background: linear-gradient(145deg, #7396e6, #315cc8 65%, #24459b);
+  box-shadow: inset 0 1px 1px #ffffffb0, inset 0 -2px 3px #1b347740, 0 7px 13px #172b492b;
+  border: 1px solid #7e9ce4;
+}
+[data-theme='studio'] .individual-icon {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+[data-theme='studio'] .desktop-hint {
+  color: #233950;
+}
+[data-theme='studio'] .dock {
+  background: linear-gradient(120deg, #ecf5ff94, #e5efff52);
+  border: 1px solid #ffffffac;
+  box-shadow: inset 0 1px 0 #fff9, 0 12px 32px #15253828;
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+}
+[data-theme='studio'] .dock button {
+  border-color: transparent;
+  box-shadow: none;
+}
+[data-theme='studio'] .dock .task-active {
+  background: #d5f3b890;
+  border-color: #efffe1;
+}
+[data-theme='studio'] .window {
+  padding: 5px;
+  border: 1px solid #ffffffb0;
+  background: #dbe8fa7a;
+  backdrop-filter: blur(30px) saturate(130%);
+  -webkit-backdrop-filter: blur(30px) saturate(130%);
+}
+[data-theme='studio'] .titlebar {
+  background: transparent;
+  backdrop-filter: none;
+}
+[data-theme='studio'] .window-body {
+  background: #f3f7fbdc;
+  border-radius: 0 0 12px 12px;
+}
+[data-theme='studio'] .window-controls button {
+  box-shadow: none;
+  border: 0;
+  background: #edf4ff70;
+}
+
+/* Windows 7: scenic wallpaper, pale reflective Aero, beveled controls. */
+[data-theme='classic'] body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+[data-theme='classic'] .wallpaper {
+  background: #557e9e url('windows7BG.jpeg') center 48% / cover;
+}
+[data-theme='classic'] .wallpaper::after {
+  background: linear-gradient(#142b4f4d, transparent 65%, #16273a26);
+}
+[data-theme='classic'] .system-bar {
+  background: linear-gradient(#e8f7ffed, #b1d3e6d6);
+  border-bottom: 1px solid #fff;
+  backdrop-filter: blur(18px);
+}
+[data-theme='classic'] .welcome h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(42px, 5vw, 72px);
+  text-shadow: 0 2px 5px #142b4f70;
+}
+[data-theme='classic'] .welcome h1 span {
+  color: #fff;
+  font-size: clamp(16px, 1.7vw, 23px);
+  text-shadow: 0 1px 3px #142b4fa0;
+}
+[data-theme='classic'] .app-cluster {
+  background: linear-gradient(125deg, #f3fbffd9, #d7ebf6a6);
+  border: 1px solid #e7f7ff;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 #fff, 0 12px 30px #0003;
+  backdrop-filter: blur(16px);
+}
+[data-theme='classic'] .app-art {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 3px 2px #0003);
+}
+[data-theme='classic'] .classic-icon {
+  display: block;
+}
+[data-theme='classic'] .individual-icon .classic-icon {
+  display: none;
+}
+[data-theme='classic'] .app-button strong {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-weight: 700;
+}
+[data-theme='classic'] .app-button:hover {
+  background: linear-gradient(#eaf6ff9e, #8fc8eb73);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+[data-theme='classic'] .app-button:hover .app-art {
+  transform: translateY(-2px);
+}
+[data-theme='classic'] .desktop-hint {
+  color: #fff;
+  text-shadow: 0 1px 4px #000;
+}
+[data-theme='classic'] .window {
+  border: 6px solid #a8d1e6ad;
+  background: #d6e9f6c4;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #f4fbff, 0 18px 50px #0005;
+  backdrop-filter: blur(18px);
+}
+[data-theme='classic'] .titlebar {
+  background: linear-gradient(#e7f5ffb8, #b7d8e98a);
+  min-height: 42px;
+}
+[data-theme='classic'] .window-controls button {
+  min-height: 28px;
+  height: 28px;
+  width: 37px;
+  padding: 0;
+  border: 1px solid #648aa4;
+  border-radius: 0;
+  box-shadow: inset 0 1px 0 #ffffffa0;
+}
+[data-theme='classic'] .window-controls button:last-child {
+  width: 48px;
+  background: linear-gradient(#e9a69c, #bc493a 50%, #a52f22 51%, #ce6c52);
+  color: #fff;
+  border-radius: 0 0 4px 0;
+}
+[data-theme='classic'] .window-body {
+  background: #f6f8fa;
+  border: 1px solid #7d9daf;
+}
+[data-theme='classic'] .dock {
+  min-height: 58px;
+  background: linear-gradient(#afd3e3d9, #79a4bed9 45%, #4a7996e8 46%, #46728ceb);
+  border-top: 1px solid #e6f8ff;
+  padding: 7px 14px;
+  backdrop-filter: blur(20px);
+}
+[data-theme='classic'] .dock button {
+  border-radius: 5px;
+  min-height: 40px;
+}
+[data-theme='classic'] #show-desktop {
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(#53aed8, #176f9e 50%, #095779 51%, #328baa);
+}
+
+@media (max-width: 1100px) {
+  .desktop-groups {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    gap: 22px;
+  }
+  .personal-cluster .app-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .welcome {
+    margin-top: 0;
+  }
+  .desktop-hint {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 600px) {
+  .desktop,
+  [data-theme='studio'] .desktop {
+    padding: 32px 16px 28px;
+  }
+  .welcome {
+    margin-bottom: 28px;
+  }
+  .welcome h1 span,
+  [data-theme='studio'] .welcome h1 span {
+    font-size: 16px;
+    max-width: 30ch;
+    margin: 16px auto 0;
+  }
+  .work-grid,
+  [data-theme='studio'] .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .app-cluster,
+  [data-theme='studio'] .app-cluster {
+    padding: 20px 10px;
+  }
+  .app-art,
+  [data-theme='studio'] .app-art {
+    width: 56px;
+    height: 56px;
+  }
+  .app-button small,
+  [data-theme='studio'] .app-button small {
+    display: none;
+  }
+  .cluster-heading span {
+    display: none;
+  }
+  .app-grid {
+    gap: 8px 4px;
+  }
+}
+@media (min-width: 1101px) and (max-height: 800px) {
+  .desktop,
+  [data-theme='studio'] .desktop {
+    padding-top: 28px;
+  }
+  .welcome {
+    margin-bottom: 28px;
+  }
+  .welcome h1,
+  [data-theme='studio'] .welcome h1 {
+    font-size: 56px;
+    font-family: "Silly";
+  }
+  .welcome .status,
+  [data-theme='studio'] .welcome .status {
+    margin: 16px 0;
+    font-family: "Code";
+  }
+  .app-cluster,
+  [data-theme='studio'] .app-cluster {
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+  .cluster-heading,
+  [data-theme='studio'] .cluster-heading {
+    padding-bottom: 10px;
+  }
+  .desktop-hint,
+  [data-theme='studio'] .desktop-hint {
+    margin-top: 22px;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  [data-theme='studio'] .app-cluster,
+  [data-theme='studio'] .system-bar,
+  [data-theme='studio'] .dock,
+  [data-theme='studio'] .window {
+    background: #dce6f2;
+    backdrop-filter: none;
+  }
+}

@@ -60,6 +60,26 @@
   let loading;
 
   const windows = new Map();
+  let theme = document.documentElement.dataset.theme || 'studio';
+  function setTheme(next) {
+    theme = next === 'classic' ? 'classic' : 'studio';
+    document.documentElement.dataset.theme = theme;
+    storage.set('theme', theme);
+    const classic = theme === 'classic';
+    $('#theme-label').textContent = classic ? 'Windows 7' : 'Studio Glass';
+    $('#theme-toggle').setAttribute('aria-pressed', String(classic));
+    $('#theme-toggle').setAttribute(
+      'aria-label',
+      'Switch to ' + (classic ? 'Studio Glass' : 'Windows 7') + ' theme',
+    );
+    const select = $('#theme-setting');
+    if (select) select.value = theme;
+    window.dispatchEvent(new Event('resize'));
+  }
+  $('#theme-toggle').addEventListener('click', () => {
+    setTheme(theme === 'studio' ? 'classic' : 'studio');
+  });
+  setTheme(theme);
   const media = matchMedia('(max-width:700px)');
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
 
@@ -146,6 +166,45 @@
   function icon(id) {
     const config = appIcons[id];
     const art = element('span', 'app-art');
+    const paths = {
+      internships:
+        'M8 14V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5M4 14h24v13H4zM12 7V4h8v3M4 19h24M14 18v4h4v-4',
+      projects: 'M3 8h10l3 4h13v15H3zM9 19l-3 3 3 3M23 19l3 3-3 3M18 17l-4 10',
+      languages: 'M9 6L2 16l7 10M23 6l7 10-7 10M19 3l-6 26',
+      design: 'M5 5h22v22H5zM5 21l8-8 6 6 4-4 4 4M21 10h.01',
+      highschool: 'M2 11l14-7 14 7-14 7zM7 15v9c6 5 12 5 18 0v-9M30 11v13',
+      about: 'M16 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM5 29v-3c0-8 22-8 22 0v3',
+      resume: 'M7 3h13l6 6v20H7zM20 3v7h6M11 16h11M11 21h11M11 26h7',
+      contact: 'M3 7h26v19H3zM3 8l13 10L29 8',
+    };
+    // Each theme has its own icon treatment; custom sources still override both.
+    const classicShapes = {
+      internships: '<path d="M23 21v-6h18v6" fill="none" stroke="#536c7d" stroke-width="5"/><rect x="9" y="21" width="46" height="32" rx="4"/><path d="M10 24h44v13H10z" fill="#ffffff45"/><path d="M10 37h44" stroke="#155781"/><path d="M28 34h8v9h-8z" fill="#e9eef2" stroke="#446980"/>',
+      projects: '<path d="M7 16h20l5 6h24v31H7z" fill="#d89f28"/><path d="M8 27h49l-5 26H5z"/><path d="M11 29h43" stroke="#fff5c9" stroke-width="2"/>',
+      languages: '<circle cx="32" cy="32" r="24"/><ellipse cx="32" cy="32" rx="11" ry="24" fill="none" stroke="#d5f3ff" stroke-width="2"/><path d="M10 23h44M8 39h48M32 8v48" fill="none" stroke="#d5f3ff" stroke-width="2"/>',
+      design: '<rect x="9" y="11" width="45" height="43" rx="3" fill="#e7edf0" stroke="#758b99"/><path d="M13 15h37v31H13z"/><circle cx="40" cy="24" r="5" fill="#e5f5b7"/><path d="M13 46l14-18 10 11 6-7 7 14" fill="#65946b"/><path d="M36 52l17-34 4 2-15 35-7 4z" fill="#d89d42" stroke="#745529"/>',
+      highschool: '<path d="M15 31v16q17 12 34 0V31"/><path d="M3 24l29-13 29 13-29 14z"/><path d="M54 27v23" stroke="#d6a231" stroke-width="3"/><path d="M50 48h8v10h-8z" fill="#e9b23d"/>',
+      about: '<circle cx="32" cy="20" r="12"/><path d="M10 55v-9c0-19 44-19 44 0v9z"/><path d="M19 40q13-7 26 0" fill="none" stroke="#ffffff65" stroke-width="2"/>',
+      resume: '<path d="M14 5h27l11 11v43H14z" fill="#f9fcff" stroke="#809bab"/><path d="M41 5v12h11" fill="#d1e0ed" stroke="#809bab"/><circle cx="25" cy="26" r="5"/><path d="M18 39v-4c0-6 14-6 14 0v4z"/><path d="M37 26h8M37 33h8M21 46h24M21 51h18" fill="none" stroke="#648299" stroke-width="3"/>',
+      contact: '<rect x="6" y="16" width="52" height="36" rx="3"/><path d="M7 49l21-19M57 49L36 30" fill="none" stroke="#387796"/><path d="M7 18l25 19 25-19" fill="#e0eff3" stroke="#56869d" stroke-width="1.5"/>',
+    };
+    const gold = id === 'projects';
+    art.innerHTML = `
+      <svg class="studio-icon" viewBox="0 0 32 32" fill="none"
+        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round"><path d="${paths[id]}" /></svg>
+      <svg class="classic-icon" viewBox="0 0 64 64" fill="url(#icon-${id})"
+        stroke="#285b80" stroke-width="1" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="icon-${id}" x1="0" y1="0" x2="0.25" y2="1">
+            <stop stop-color="${gold ? '#ffeb9a' : '#b4e6fa'}"/>
+            <stop offset=".48" stop-color="${gold ? '#efc95c' : '#59acd3'}"/>
+            <stop offset=".51" stop-color="${gold ? '#e6b344' : '#2c86b8'}"/>
+            <stop offset="1" stop-color="${gold ? '#f4cf6a' : '#176291'}"/>
+          </linearGradient>
+        </defs>
+        ${classicShapes[id]}
+      </svg>`;
     art.setAttribute('aria-hidden', 'true');
     art.style.setProperty('--x', config.x + '%');
     art.style.setProperty('--y', config.y + '%');
@@ -608,22 +667,41 @@
     data[id].forEach((item, index) => {
       const b = button('', () => detail(win, id, index), 'file-card');
 
-      b.classList.add('poster-tile', brand(item));
-      b.append(thumbnail(item));
+      const meta = projectMeta(item);
+      b.classList.add('poster-tile', 'playing-card', brand(item));
+      const activityColors = {
+        'Marcus High School': '#702c39',
+        'Marcus DECA': '#214a8c',
+        'Social Studies UIL': '#744c2e',
+        'Academic Decathlon': '#715c14',
+        'Marcus Stocks Club': '#164b4d',
+        'Marcus JV Tennis': '#315d2e',
+        'Schoolhouse.world': '#5b4381',
+        'Camp Invention': '#9a431d',
+        'Siddhi Hanuman Temple': '#f4a52b',
+        'Figma Prototyping': '#543d80',
+        'Canva Designs': '#006c76',
+        'Instagram Photography': '#853d64',
+      };
+      b.style.setProperty('--card-color', meta.color || activityColors[item.title] || '#315fc5');
+      b.style.setProperty('--card-ink', meta.ink || (/Siddhi Hanuman Temple/i.test(item.title) ? '#35240d' : '#fff'));
+      if (id === 'design') b.classList.add('image-led-card');
+      b.setAttribute('aria-label', `Explore ${item.title}${item.subtitle ? ' · ' + item.subtitle : ''}`);
+      b.append(element('span', 'card-category', id === 'internships' ? 'Internship' : id === 'projects' ? 'Project' : id === 'design' ? 'Design' : 'Experience'));
+      const symbol = element('span', 'card-symbol');
+      symbol.setAttribute('aria-hidden', 'true');
+      symbol.innerHTML = id === 'internships'
+        ? '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="11" width="24" height="17" rx="3"/><path d="M11 11V6h10v5M4 18h24M13 17v5h6v-5"/></svg>'
+        : '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8L3 16l7 8M22 8l7 8-7 8M19 5l-6 22"/></svg>';
+      b.append(symbol, thumbnail(item));
 
       const text = element('span', 'file-text');
 
-      text.append(element('strong', '', item.title));
+      text.append(element('strong', '', meta.displayName || item.title));
 
       if (item.subtitle) {
         text.append(element('small', '', item.subtitle));
       }
-
-      if (item.summary) {
-        text.append(element('p', '', item.summary));
-      }
-
-      text.append(element('span', 'open-label', 'Explore details ↗'));
 
       b.append(text);
       grid.append(b);
@@ -683,7 +761,10 @@
       trigger.append(img);
     });
 
-    replace(win, [back, article]);
+    const toolbar = element('nav', 'detail-toolbar');
+    toolbar.setAttribute('aria-label', 'Project navigation');
+    toolbar.append(back, element('span', 'detail-current', item.title));
+    replace(win, [toolbar, article]);
     back.focus();
 
     chime();
@@ -752,6 +833,21 @@
     return new DOMParser().parseFromString(item.html, 'text/html').body;
   }
 
+  // Dates are transcribed from images/Anand_Rahul_Resume_Web.png.
+  // Edit this table to update logos, dates, and individual card colors.
+  const projectProfiles = [
+    { match: /DriveDrop/i, logo: 'images/drivedropLogo.png', color: '#10283f', when: 'June 2026 – August 2026' },
+    { match: /NeuralSeek/i, logo: 'images/NeuralSeekLogo.png', color: '#514080', backing: true, when: 'July 2025 – September 2025' },
+    { match: /TechMeKid/i, logo: 'images/TechMeKidLogo.png', color: '#24583f', backing: true, when: 'June 2025 – July 2025' },
+    { match: /CodeGana/i, logo: 'images/codeganaLogoWide.png', color: '#b2f34b', ink: '#182813', backing: true, when: 'August 2025 – Present' },
+    { match: /FLINT/i, logo: 'images/FLiNTLogo.png', color: '#565e68', backing: true, displayName: 'FLiNT', when: 'August 2025 – Present', trophy: 'images/FLiNTWin.jpeg' },
+    { match: /Verses.*Vibes/i, logo: 'images/versesAndVibesLogo1.png', color: '#4c3666', when: 'June 2025 – January 2026' },
+  ];
+
+  function projectMeta(item) {
+    return projectProfiles.find((profile) => profile.match.test(item.title)) || {};
+  }
+
   function brand(item) {
     return /DriveDrop/i.test(item.title)
       ? 'drivedrop'
@@ -762,10 +858,15 @@
 
   function thumbnail(item) {
     const art = element('div', 'tile-art');
-    if (/DriveDrop/i.test(item.title)) {
+    if (/Marcus Stocks Club|Marcus JV Tennis/i.test(item.title)) {
+      art.classList.add('activity-art');
+    }
+    const meta = projectMeta(item);
+    if (meta.backing) art.classList.add('logo-panel');
+    if (meta.logo) {
       const img = element('img', 'tile-logo');
-      img.src = 'images/drivedropLogo.png';
-      img.alt = 'DriveDrop logo';
+      img.src = meta.logo;
+      img.alt = item.title + ' logo';
       img.loading = 'lazy';
       img.decoding = 'async';
       art.append(img);
@@ -775,13 +876,6 @@
       img.alt = item.alt;
       img.loading = 'lazy';
       art.append(img);
-      if (/CodeGana/i.test(item.title)) {
-        img.className = 'tile-logo';
-        const mascot = element('img', 'tile-mascot');
-        mascot.src = 'images/CGmascotLeft!.png';
-        mascot.alt = 'CodeGana mascot';
-        art.append(mascot);
-      }
     } else {
       art.append(element('span', 'typographic-cover', item.title));
     }
@@ -791,21 +885,36 @@
   function buildStory(article, item) {
     article.className = 'detail story-poster ' + brand(item);
     const doc = source(item);
+    const meta = projectMeta(item);
     const header = element('header', 'story-header');
     header.append(element('h2', 'story-title', item.title));
     if (item.subtitle) header.append(element('p', 'story-role', item.subtitle));
+    const links = element('div', 'story-links');
+    all('a[href]', doc).forEach((link) => {
+      const copy = link.cloneNode(true);
+      copy.className = '';
+      if (/BOOT SYSTEM/i.test(copy.textContent)) copy.textContent = 'Visit CodeGana';
+      links.append(copy);
+    });
+    if (links.children.length) header.append(links);
     const hero = element('figure', 'story-hero');
     const image = /CodeGana/i.test(item.title)
       ? 'images/CGScreenshot.png'
       : /DriveDrop/i.test(item.title)
         ? 'images/drivedrop-grand-cherokee-blue.png'
-        : item.image;
+        : /NeuralSeek|TechMeKid|FLINT/i.test(item.title)
+          ? meta.logo
+          : item.image;
     if (image) {
       const img = element('img', 'story-main-image');
       img.src = image;
       img.alt = /CodeGana/i.test(item.title)
         ? 'CodeGana coding interface'
-        : item.alt || item.title;
+        : /DriveDrop/i.test(item.title)
+          ? 'DriveDrop vehicle listing for a Jeep Grand Wagoneer'
+          : /NeuralSeek|TechMeKid|FLINT/i.test(item.title)
+            ? item.title + ' logo'
+            : item.alt || item.title;
       img.width = 1000;
       img.height = 650;
       img.decoding = 'async';
@@ -815,17 +924,64 @@
       if (video) hero.append(video);
       else hero.append(thumbnail(item));
     }
-    const layout = element('div', 'story-layout');
-    const copy = element('section', 'story-copy');
-    copy.append(element('h3', '', 'The work'));
-    all('p,ul,ol,.skill-grid', doc)
-      .filter((el) => !el.parentElement.closest('p,ul,ol,.skill-grid'))
-      .forEach((el) => copy.append(el));
-    const links = element('div', 'story-links');
-    all('a[href]', doc).forEach((a) => links.append(a));
-    copy.append(links);
-    const media = element('section', 'story-media');
-    media.append(element('h3', '', 'Inside the project'));
+    const masthead = element('div', 'story-masthead');
+    masthead.append(header, hero);
+    article.append(masthead);
+
+    // Reorganize the supplied copy without inventing dates, results or skills.
+    const paragraphs = all('p', doc).filter((p) => !p.closest('li'));
+    const segmenter = typeof Intl.Segmenter === 'function'
+      ? new Intl.Segmenter('en', { granularity: 'sentence' })
+      : null;
+    const first = paragraphs.shift()?.textContent.trim() || '';
+    const sentences = segmenter
+      ? [...segmenter.segment(first)].map((part) => part.segment.trim())
+      : [first];
+    const overview = element('section', 'story-section story-overview');
+    overview.append(element('h3', '', 'Overview'));
+    const overviewBody = element('div', 'story-section-body');
+    if (sentences[0]) overviewBody.append(element('p', 'story-lead', sentences.shift()));
+    overview.append(overviewBody);
+
+    const fullCopy = all('p,li', doc).map((p) => p.textContent).join(' ');
+    const technologies = [
+      ['Qwen 2.5', /Qwen 2\.5/i], ['LoRA', /\bLoRA\b/i],
+      ['Apple MLX', /\bMLX\b/i], ['React', /\bReact\b/i],
+      ['TypeScript', /\bTypeScript\b/i], ['Firebase', /\bFirebase\b/i],
+      ['Python', /\bPython\b/i], ['HTML', /\bHTML\b/i],
+      ['CSS', /\bCSS\b/i], ['JavaScript', /\bJavaScript\b/i],
+      ['Figma', /\bFigma\b/i], ['OpenCV', /\bOpenCV\b/i],
+      ['PyCoral', /\bPyCoral\b/i], ['MetaDrive', /\bMetaDrive\b/i],
+    ].filter(([, pattern]) => pattern.test(fullCopy));
+    if (/NeuralSeek/i.test(item.title)) technologies.push(['NeuralSeek']);
+    if (technologies.length || meta.when) {
+      const metadata = element('dl', 'story-metadata');
+      if (meta.when) {
+        metadata.append(element('dt', '', 'When'), element('dd', 'story-dates', meta.when));
+      }
+      if (technologies.length) {
+        metadata.append(element('dt', '', 'Built with'));
+        const pills = element('dd', 'technology-pills');
+        technologies.forEach(([name]) => pills.append(technologyPill(name)));
+        metadata.append(pills);
+      }
+      article.append(metadata);
+    }
+    if (overviewBody.children.length) article.append(overview);
+
+    const highlights = element('section', 'story-section story-highlights');
+    highlights.append(element('h3', '', 'Highlights'));
+    const list = element('ul', 'story-highlight-list');
+    sentences.filter(Boolean).forEach((text) => list.append(element('li', '', text)));
+    paragraphs.forEach((p) => {
+      if (p.textContent.trim()) list.append(element('li', '', p.textContent.trim()));
+    });
+    all('ul > li, ol > li', doc).forEach((li) => list.append(li.cloneNode(true)));
+    highlights.append(list);
+    if (list.children.length) article.append(highlights);
+
+    const media = element('section', 'story-section story-media');
+    media.append(element('h3', '', 'A closer look'));
     const rail = element('div', 'story-evidence');
     all('img,video', doc)
       .filter((el) => el.getAttribute('src') !== image)
@@ -833,17 +989,53 @@
         el.loading = 'lazy';
         rail.append(el);
       });
-    if (!rail.children.length) {
-      media.append(
-        element(
-          'p',
-          '',
-          'Explore the project through its overview and linked resources.',
-        ),
-      );
-    } else media.append(rail);
-    layout.append(copy, media);
-    article.append(header, hero, layout);
+    if (/FLINT/i.test(item.title)) {
+      if (meta.trophy) {
+        const trophy = element('img', 'flint-team-photo');
+        trophy.src = meta.trophy;
+        trophy.alt = 'The FLiNT team holding the competition trophy';
+        rail.append(trophy);
+      }
+      for (const caption of ['Project photo to come', 'Behind the scenes to come']) {
+        const placeholder = element('figure', 'media-placeholder');
+        placeholder.append(element('span', '', caption));
+        rail.append(placeholder);
+      }
+    }
+    if (rail.children.length) {
+      media.append(rail);
+      article.append(media);
+    }
+    const skills = $('.skill-grid', doc);
+    if (skills) article.append(skills);
+  }
+
+  function technologyPill(name) {
+    const logos = {
+      React: 'images/tech/react.svg', TypeScript: 'images/tech/typescript.svg',
+      Firebase: 'images/tech/firebase.svg', Python: 'images/tech/python.svg',
+      HTML: 'images/tech/html5.svg', OpenCV: 'images/tech/opencv.svg',
+      Figma: 'images/figma_logo.webp', NeuralSeek: 'images/NeuralSeekLogo.png',
+    };
+    const slug = name.toLowerCase().replace(/[^a-z]/g, '');
+    const pill = element('span', 'technology-pill technology-' + slug);
+    if (logos[name]) {
+      const img = element('img');
+      img.src = logos[name];
+      img.alt = '';
+      img.width = 20;
+      img.height = 20;
+      pill.append(img);
+    } else {
+      const mark = element('span', 'technology-mark', {
+        JavaScript: 'JS', CSS: 'CSS', 'Qwen 2.5': 'Q', LoRA: 'L',
+        'Apple MLX': 'MLX', PyCoral: 'PC', MetaDrive: 'MD',
+      }[name] || name.slice(0, 2));
+      mark.setAttribute('aria-hidden', 'true');
+      pill.append(mark);
+    }
+    pill.append(element('span', '', name));
+    return pill;
   }
 
   function photography(win, item) {
@@ -1069,7 +1261,7 @@
     hero.append(intro, visual);
     wrap.append(hero);
     const names = [
-      'The person behind the work',
+      'Learning with purpose.',
       'Built in the real world',
       'My technical toolkit',
       'Beyond the screen',
@@ -1083,34 +1275,174 @@
       all('.floating-badge', doc).forEach((el) => el.remove());
       section.append(element('h2', '', names[i] || item.title));
       const content = element('div', 'about-story-content');
-      content.append(...doc.childNodes);
+      if (i === 0) {
+        const education = element('div', 'education-summary');
+        education.append(element('h3', '', 'Texas A&M University'));
+        education.append(element('p', 'education-degree', 'Computer Science'));
+        const facts = element('dl', 'education-facts');
+        for (const [label, value] of [
+          ['Minor', 'Engineering Entrepreneurship'],
+          ['Scholarship', 'President Endowed Scholar'],
+        ]) {
+          const fact = element('div');
+          fact.append(element('dt', '', label), element('dd', '', value));
+          facts.append(fact);
+        }
+        education.append(facts);
+        content.append(education);
+      } else if (i === 1) content.append(workDuet(win));
+      else content.append(...doc.childNodes);
       section.append(content);
       if (i === 3) {
-        const photos = element('div', 'about-photo-strip');
-        [
-          ['jp4.jpg', 'A view from Japan'],
-          ['ind4.jpg', 'A view from India'],
-          ['jp8.jpg', 'Travel photography from Japan'],
-        ].forEach(([src, alt]) => {
+        const journey = element('section', 'travel-journey');
+        journey.setAttribute('aria-label', 'Travel photography journey');
+        const photographyItem = data.design.find((entry) => /Instagram Photography/i.test(entry.title));
+        const pool = all('img', source(photographyItem)).map((img) => ({
+          src: img.getAttribute('src'),
+          alt: img.alt,
+          country: /\/jp/i.test(img.getAttribute('src')) ? 'Japan' : 'India',
+        }));
+        // Shuffle a fresh copy once per opening, not during resize or scrolling.
+        for (let j = pool.length - 1; j > 0; j--) {
+          const k = Math.floor(Math.random() * (j + 1));
+          [pool[j], pool[k]] = [pool[k], pool[j]];
+        }
+        const photos = pool.slice(0, 3);
+        journey.dataset.photos = JSON.stringify(photos);
+        journey.innerHTML = `
+          <div class="travel-stage">
+            <div class="travel-heading">
+              <h3>Taking the scenic route.</h3>
+              <p>Three frames from my travels.</p>
+            </div>
+            <div class="travel-canvas">
+              <svg class="travel-route" viewBox="0 0 1000 640" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M250 300 C280 40 850 100 750 300 S150 560 700 440" />
+              </svg>
+              <figure class="travel-photo">
+                <div class="travel-frames"></div>
+                <figcaption></figcaption>
+              </figure>
+            </div>
+          </div>
+        `;
+        photos.forEach((photo) => {
           const img = element('img');
-          img.src = 'images/' + src;
-          img.alt = alt;
-          img.loading = 'lazy';
+          img.src = photo.src;
+          img.alt = photo.alt;
           img.width = 500;
           img.height = 500;
-          photos.append(img);
+          img.decoding = 'async';
+          $('.travel-frames', journey).append(img);
         });
-        section.append(photos);
+        $('figcaption', journey).textContent = photos[0].country + ' · Through my lens';
+        section.append(journey);
       }
       wrap.append(section);
     });
     const end = element('footer', 'about-close');
-    end.append(
+    const closingCopy = element('div', 'about-close-copy');
+    closingCopy.append(
       element('h2', '', 'Let’s build something.'),
       button('Get in touch', () => openApp('contact'), 'about-jump'),
     );
+    const graphics = element('div', 'closing-graphics');
+    for (const [src, label] of [
+      ['images/boolean-sensitivity.gif', 'Logic in motion'],
+      ['images/computerGif.gif', 'Computer in motion'],
+    ]) {
+      const figure = element('figure', 'animated-graphic');
+      const img = element('img');
+      img.dataset.animationSrc = src;
+      img.alt = label;
+      img.hidden = true;
+      const still = element('canvas');
+      still.setAttribute('role', 'img');
+      still.setAttribute('aria-label', label + ', paused');
+      figure.append(img, still);
+      graphics.append(figure);
+    }
+    const pause = button('Pause animations', () => {
+      const paused = pause.getAttribute('aria-pressed') !== 'true';
+      pause.setAttribute('aria-pressed', String(paused));
+      pause.textContent = paused ? 'Play animations' : 'Pause animations';
+      graphics.dataset.paused = String(paused);
+      graphics.dispatchEvent(new Event('graphics-toggle'));
+    }, 'graphics-toggle');
+    pause.setAttribute('aria-pressed', 'false');
+    graphics.append(pause);
+    end.append(closingCopy, graphics);
     wrap.append(end);
     replace(win, [wrap]);
+  }
+
+  function workDuet(win) {
+    const duet = element('div', 'work-duet');
+    const tracks = [
+      { name: 'SWE', title: 'Built for people.', names: ['CodeGana', 'TechMeKid', 'Verses & Vibes'] },
+      { name: 'AI', title: 'Built to think.', names: ['DriveDrop', 'NeuralSeek', 'FLINT Autonomous Vehicle'] },
+    ];
+    tracks.forEach((track, trackIndex) => {
+      const panel = element('section', 'work-track work-track-' + track.name.toLowerCase());
+      const heading = element('h3', 'work-track-title', track.name);
+      panel.append(heading, element('p', 'work-track-intro', track.title));
+      const tabs = element('div', 'work-track-tabs');
+      tabs.setAttribute('role', 'tablist');
+      tabs.setAttribute('aria-label', track.name + ' projects');
+      const spotlight = element('div', 'work-spotlight');
+      spotlight.id = `work-${win.id}-${trackIndex}`;
+      spotlight.setAttribute('role', 'tabpanel');
+      const entries = track.names.map((name) => {
+        const id = data.internships.some((entry) => entry.title === name) ? 'internships' : 'projects';
+        const index = data[id].findIndex((entry) => entry.title === name);
+        return { item: data[id][index], id, index };
+      });
+      function select(index) {
+        const { item, id, index: itemIndex } = entries[index];
+        const meta = projectMeta(item);
+        const logo = element('img', 'work-spotlight-logo');
+        logo.src = meta.logo;
+        logo.alt = item.title + ' logo';
+        const copy = element('div', 'work-spotlight-copy');
+        copy.append(element('h4', '', meta.displayName || item.title));
+        copy.append(element('p', '', item.subtitle));
+        const sentence = typeof Intl.Segmenter === 'function'
+          ? [...new Intl.Segmenter('en', { granularity: 'sentence' }).segment(item.summary)][0].segment
+          : item.summary;
+        copy.append(element('p', 'work-spotlight-summary', sentence));
+        copy.append(button('Explore the work ↗', async () => {
+          await openApp(id);
+          detail(windows.get(id), id, itemIndex);
+        }, 'work-open'));
+        spotlight.replaceChildren(logo, copy);
+        all('[role="tab"]', tabs).forEach((tab, i) => {
+          tab.setAttribute('aria-selected', String(i === index));
+          tab.tabIndex = i === index ? 0 : -1;
+        });
+        spotlight.setAttribute('aria-labelledby', `work-tab-${win.id}-${trackIndex}-${index}`);
+        spotlight.dispatchEvent(new Event('work-selection', { bubbles: true }));
+      }
+      entries.forEach(({ item }, index) => {
+        const tab = button(projectMeta(item).displayName || item.title, () => select(index));
+        tab.id = `work-tab-${win.id}-${trackIndex}-${index}`;
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-controls', spotlight.id);
+        tab.addEventListener('keydown', (event) => {
+          const next = event.key === 'ArrowRight' ? (index + 1) % 3
+            : event.key === 'ArrowLeft' ? (index + 2) % 3
+            : event.key === 'Home' ? 0 : event.key === 'End' ? 2 : null;
+          if (next === null) return;
+          event.preventDefault();
+          select(next);
+          tabs.children[next].focus();
+        });
+        tabs.append(tab);
+      });
+      panel.append(tabs, spotlight);
+      duet.append(panel);
+      select(0);
+    });
+    return duet;
   }
 
   /* Résumé */
@@ -1124,7 +1456,7 @@
       'A closer look at my experience, education, and skills.',
     );
 
-    const actions = element('div');
+    const actions = element('div', 'resume-actions');
     const img = element('img', 'resume-preview');
 
     img.src = 'images/Anand_Rahul_Resume_Web.png';
@@ -1146,7 +1478,7 @@
   /* Contact */
 
   function contact(win) {
-    const heading = element('h2', '', 'Let’s connect');
+    const heading = element('h2', 'contact-heading', 'Let’s connect');
 
     const description = element(
       'p',
@@ -1199,7 +1531,7 @@
       heading,
       description,
       links,
-      element('p', '', 'rahulanandbus@gmail.com'),
+      element('p', 'contact-email-address', 'rahulanandbus@gmail.com'),
       copy,
     ]);
   }
@@ -1214,6 +1546,25 @@
       'app-caption',
       'Your preferences stay in this browser. Sound always starts muted.',
     );
+    const appearance = element('label', 'setting appearance-setting');
+    const appearanceCopy = element('span');
+    appearanceCopy.append(
+      element('strong', '', 'Appearance'),
+      element('p', '', 'Choose your desktop. Your preference is remembered.'),
+    );
+    const themeSelect = element('select');
+    themeSelect.id = 'theme-setting';
+    [
+      ['studio', 'Studio Glass'],
+      ['classic', 'Windows 7'],
+    ].forEach(([value, name]) => {
+      const option = element('option', '', name);
+      option.value = value;
+      themeSelect.append(option);
+    });
+    themeSelect.value = theme;
+    themeSelect.addEventListener('change', () => setTheme(themeSelect.value));
+    appearance.append(appearanceCopy, themeSelect);
 
     function row(title, text, checked, change, id) {
       const label = element('label', 'setting');
@@ -1256,6 +1607,7 @@
     );
 
     const reset = button('Reset preferences', () => {
+      setTheme('studio');
       motion = true;
       storage.set('motion', 'on');
       toggleSound(false);
@@ -1266,6 +1618,7 @@
     replace(win, [
       heading,
       description,
+      appearance,
       motionRow,
       soundRow,
       element(

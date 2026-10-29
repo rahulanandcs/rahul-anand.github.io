@@ -1,0 +1,636 @@
+/* Two complete desktop treatments. Content surfaces use the same readable tokens. */
+@font-face {
+  font-family: 'Portfolio Inter';
+  src: url('../Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --ui-ink: #172333;
+  --ui-secondary: #47566a;
+  --ui-ground: #e9edf2;
+  --ui-surface: #f5f7fa;
+  --ui-accent: #145da9;
+  --ui-dark: #182d43;
+  --studio-paper: var(--ui-surface);
+  --studio-ink: var(--ui-ink);
+  --studio-accent: #cde2f5;
+  --studio-muted: #e2e9f0;
+  --paper: var(--ui-surface);
+  --ink: var(--ui-ink);
+  --accent: var(--ui-accent);
+  --field: #e0e8f0;
+  font-family: 'Portfolio Inter', sans-serif;
+  color: var(--ui-ink);
+}
+
+::selection {
+  background: #b8d9fa;
+  color: #122b48;
+}
+
+button,
+a,
+select {
+  touch-action: manipulation;
+}
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--ui-accent);
+  outline-offset: 4px;
+}
+
+.system-actions button {
+  min-height: 44px;
+}
+#theme-toggle {
+  font-weight: 650;
+  font-size: 13px;
+}
+#theme-toggle span {
+  display: inline;
+}
+.appearance-setting select {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 8px 12px;
+  background: var(--ui-surface);
+  color: var(--ui-ink);
+  border: 1px solid #8795a6;
+  border-radius: 8px;
+  font: inherit;
+}
+
+/* Studio Glass: translucency is reserved for floating system chrome. */
+[data-theme='studio'] body {
+  color: var(--ui-ink);
+}
+[data-theme='studio'] * {
+  text-shadow: none;
+}
+[data-theme='studio'] .app-button {
+  border: 0;
+}
+.control-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.dock button {
+  font-size: 13px;
+}
+.status {
+  order: 1;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome h1 {
+  order: 0;
+}
+.welcome .intro {
+  display: none;
+}
+.welcome .quick-actions {
+  order: 2;
+}
+[data-theme='studio'] .status {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.system-bar .system-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+[data-theme='studio'] h1,
+[data-theme='studio'] h2,
+[data-theme='studio'] h3,
+[data-theme='studio'] h4,
+[data-theme='studio'] .brand,
+[data-theme='studio'] .file-text strong,
+[data-theme='studio'] .app-button strong {
+  font-family: 'Portfolio Inter', sans-serif;
+}
+[data-theme='studio'] .wallpaper {
+  background: var(--ui-ground);
+  opacity: 1;
+}
+[data-theme='studio'] .wallpaper::after {
+  display: none;
+}
+[data-theme='studio'] button,
+[data-theme='studio'] .pill {
+  background: #e0e7ef;
+  color: var(--ui-ink);
+  border: 0;
+  border-radius: 12px;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+[data-theme='studio'] button:hover,
+[data-theme='studio'] .pill:hover {
+  background: #d0dce8;
+  box-shadow: none;
+}
+[data-theme='studio'] .primary {
+  background: var(--ui-ink);
+  color: white;
+}
+[data-theme='studio'] .primary:hover {
+  background: #304962;
+}
+[data-theme='studio'] .system-bar {
+  background: #f5f7facc;
+  backdrop-filter: blur(20px);
+  border: 0;
+  box-shadow: none;
+  font-size: 13px;
+}
+[data-theme='studio'] .brand {
+  color: var(--ui-ink);
+}
+[data-theme='studio'] .brand b {
+  color: var(--ui-accent);
+}
+[data-theme='studio'] .system-actions button {
+  background: transparent;
+}
+[data-theme='studio'] .desktop {
+  max-width: 1440px;
+  margin: auto;
+  gap: 44px;
+}
+[data-theme='studio'] .welcome {
+  text-shadow: none;
+}
+[data-theme='studio'] h1 {
+  color: var(--ui-ink);
+  text-shadow: none;
+  font-size: clamp(48px, 6vw, 84px);
+  letter-spacing: -0.04em;
+  font-weight: 650;
+}
+[data-theme='studio'] h1 span {
+  color: var(--ui-secondary);
+  font-size: clamp(17px, 1.65vw, 23px);
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+}
+[data-theme='studio'] .status {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  color: #315e4c;
+  box-shadow: none;
+  font-size: 13px;
+}
+[data-theme='studio'] .status i {
+  background: #31815d;
+  box-shadow: none;
+}
+[data-theme='studio'] .quick-actions {
+  margin-top: 28px;
+}
+[data-theme='studio'] .quick-actions button {
+  min-height: 44px;
+  font-size: 14px;
+}
+[data-theme='studio'] .app-cluster {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 12px;
+}
+[data-theme='studio'] .cluster-heading {
+  padding-bottom: 20px;
+}
+[data-theme='studio'] .cluster-heading span {
+  font-size: 12px;
+  color: var(--ui-secondary);
+  opacity: 1;
+}
+[data-theme='studio'] .app-button {
+  background: transparent;
+  padding: 16px 4px;
+}
+[data-theme='studio'] .app-button:hover {
+  background: #dce4ed;
+  box-shadow: none;
+  transform: translateY(-3px);
+}
+[data-theme='studio'] .app-button strong {
+  font-size: 13px;
+}
+[data-theme='studio'] .app-button small {
+  font-size: 12px;
+  color: var(--ui-secondary);
+}
+[data-theme='studio'] .app-art {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: 58px;
+  height: 58px;
+  color: var(--ui-accent);
+}
+.studio-icon {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+[data-theme='studio'] .studio-icon {
+  display: block;
+}
+[data-theme='studio'] .individual-icon .studio-icon {
+  display: none;
+}
+[data-theme='studio'] .app-button:hover .app-art {
+  transform: translateY(-2px);
+}
+[data-theme='studio'] .desktop-hint {
+  color: var(--ui-secondary);
+  text-shadow: none;
+  font-size: 13px;
+}
+[data-theme='studio'] .dock {
+  background: #f5f7fad9;
+  border: 0;
+  box-shadow: 0 12px 36px #00000024;
+  border-radius: 18px;
+  backdrop-filter: blur(24px);
+}
+[data-theme='studio'] .dock button {
+  background: transparent;
+}
+[data-theme='studio'] .dock .task-active {
+  background: #d5e3f1;
+}
+[data-theme='studio'] .window {
+  border: 0;
+  border-radius: 18px;
+  background: var(--ui-surface);
+  box-shadow: 0 24px 80px #00000030;
+}
+[data-theme='studio'] .window.focused {
+  box-shadow: 0 24px 80px #00000040;
+}
+[data-theme='studio'] .titlebar {
+  background: #e8edf3e8;
+  border: 0;
+  backdrop-filter: blur(20px);
+}
+[data-theme='studio'] .window-controls {
+  gap: 8px;
+}
+[data-theme='studio'] .window-controls button {
+  width: 44px;
+  height: 36px;
+  background: #d8e0e9;
+  color: var(--ui-ink);
+  border-radius: 8px;
+}
+[data-theme='studio'] .window-controls button:last-child {
+  background: #e9d3d4;
+  color: #7f2531;
+  text-shadow: none;
+}
+[data-theme='studio'] .window-body {
+  background: var(--ui-surface);
+  color: var(--ui-ink);
+}
+[data-theme='studio'] .app-caption {
+  color: var(--ui-secondary);
+  font-size: 14px !important;
+}
+[data-theme='studio'] .poster-tile {
+  border-radius: 14px;
+  background: #e8eef4;
+}
+[data-theme='studio'] .file-text small {
+  color: var(--ui-secondary);
+}
+[data-theme='studio'] .boot {
+  background: var(--ui-ground);
+  color: var(--ui-ink);
+}
+
+/* Windows 7: tighter chrome, a blue desktop, glossy controls and a taskbar. */
+[data-theme='classic'] .wallpaper {
+  background: #237cae url('wallpaper.png') center / cover;
+}
+[data-theme='classic'] .window {
+  border-radius: 8px;
+  border: 6px solid #9ac6dfb8;
+}
+[data-theme='classic'] .titlebar {
+  background: linear-gradient(#e8f5ff, #a6cee5);
+}
+[data-theme='classic'] .window-controls {
+  gap: 0;
+}
+[data-theme='classic'] .window-controls button {
+  border-radius: 3px;
+  min-height: 32px;
+}
+[data-theme='classic'] .dock {
+  inset: auto 0 0;
+  transform: none;
+  max-width: none;
+  border-radius: 0;
+  background: linear-gradient(#abcfe5df, #427795ed);
+  justify-content: flex-start;
+}
+[data-theme='classic'] .desktop-hint {
+  color: #12394f;
+  text-shadow: none;
+}
+
+/* About: remove inherited white card surfaces, then compose each section. */
+.about-race {
+  font-family: 'Portfolio Inter', sans-serif;
+}
+.window-body .about-title {
+  font-family: inherit;
+  font-weight: 650;
+}
+.about-race .about-story h2 {
+  font-family: inherit;
+  font-weight: 650;
+}
+.portrait-reveal {
+  border-radius: 16px;
+}
+.about-race .portrait-caption .portrait-toggle {
+  background: transparent;
+  padding: 10px 12px;
+}
+[data-theme='classic'] h1,
+[data-theme='classic'] h2,
+[data-theme='classic'] h3,
+[data-theme='classic'] h4 {
+  font-family: 'Segoe UI', sans-serif;
+}
+.about-story .snapshot-bio-card,
+.about-story .highlight-cards-wrapper,
+.about-story .exp-card,
+.about-story .project-card,
+.about-story .personal-card,
+.about-story .tool-box {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+.about-story .exp-card h4,
+.about-story .tool-box h4 {
+  color: inherit;
+  font:
+    650 23px/1.25 'Portfolio Inter',
+    sans-serif;
+  margin: 0 0 12px;
+}
+.about-story .exp-role {
+  color: #bfd6ec;
+  font-size: 14px;
+}
+.about-story .exp-header {
+  margin-bottom: 12px;
+}
+.about-story .tech-pill {
+  background: var(--studio-muted);
+  color: var(--studio-ink);
+  box-shadow: none;
+  border: 0;
+  padding: 8px 12px;
+  display: inline-block;
+  margin: 4px;
+}
+.about-story .mini-neon-btn {
+  background: #cde2f5;
+  color: #172333;
+  border: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.about-story .experience-grid {
+  gap: 36px;
+}
+.about-story .toolkit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.about-story-1 {
+  background: var(--ui-dark);
+  color: #f5f7fa;
+}
+.about-story-3 {
+  background: #dce8f2;
+  color: var(--ui-ink);
+}
+.about-story .highlight-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.about-story .metric-card {
+  flex: 1 1 120px;
+}
+.about-story .metric-number {
+  font-size: 46px;
+}
+.about-story .snapshot-grid {
+  grid-template-columns: 1fr;
+}
+.about-story .metric-text-bold {
+  font-size: 22px;
+}
+.about-close {
+  background: var(--ui-dark);
+  color: #f5f7fa;
+}
+.about-close h2 {
+  font-weight: 600;
+}
+.travel-journey {
+  height: 1350px;
+  margin-top: 60px;
+}
+.travel-stage {
+  position: sticky;
+  top: 0;
+  height: min(590px, 65vh);
+  min-height: 360px;
+  overflow: hidden;
+}
+.travel-heading {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 2;
+  max-width: 50%;
+  pointer-events: none;
+}
+.about-story .travel-heading h3 {
+  font-size: clamp(26px, 4vw, 48px);
+  font-weight: 600;
+  margin: 0 0 16px;
+  letter-spacing: -0.035em;
+}
+.travel-heading p {
+  max-width: 25ch;
+}
+.travel-route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.travel-route path {
+  stroke: #6c8aa6;
+  stroke-width: 2;
+  stroke-dasharray: 5 10;
+  fill: none;
+}
+.travel-journey .travel-photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: clamp(150px, 27%, 260px);
+  transform: translate(120%, 90%) rotate(-8deg);
+}
+.travel-journey .travel-photo img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+.travel-journey .travel-photo figcaption {
+  font-size: 13px;
+  line-height: 1.4;
+  padding-top: 12px;
+  font-weight: 600;
+}
+.motion-static .travel-journey {
+  height: auto;
+}
+.motion-static .travel-stage {
+  position: relative;
+  height: auto;
+  min-height: 0;
+}
+.motion-static .travel-heading {
+  position: static;
+  max-width: 100%;
+}
+.motion-static .travel-journey .travel-photo {
+  position: relative;
+  transform: none;
+  margin: 28px auto;
+  width: 60%;
+}
+.motion-static .travel-route {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .system-description {
+    display: none;
+  }
+  .system-bar {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .system-actions {
+    gap: 2px;
+  }
+  .system-actions time {
+    display: none;
+  }
+  #theme-toggle {
+    font-size: 12px;
+  }
+  [data-theme='studio'] .desktop {
+    justify-content: flex-start;
+    gap: 32px;
+  }
+  [data-theme='studio'] .desktop-groups {
+    gap: 28px;
+  }
+  [data-theme='studio'] .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  [data-theme='studio'] .window-controls button {
+    width: 36px;
+  }
+  [data-theme='studio'] .window {
+    border-radius: 14px;
+  }
+  .about-story .experience-grid,
+  .about-story .toolkit-grid,
+  .about-story .personal-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-story > h2 {
+    font-size: 30px;
+  }
+  .travel-journey {
+    height: 1000px;
+  }
+  .travel-stage {
+    height: 480px;
+  }
+  .travel-heading {
+    max-width: 100%;
+  }
+  .travel-journey .travel-photo {
+    width: 150px;
+  }
+  .appearance-setting {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-journey {
+    height: auto;
+  }
+  .travel-stage {
+    position: relative;
+    height: auto;
+    min-height: 0;
+  }
+  .travel-heading {
+    position: static;
+    max-width: 100%;
+  }
+  .travel-journey .travel-photo {
+    position: relative;
+    transform: none;
+    margin: 28px auto;
+    width: 60%;
+  }
+  .travel-route {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   color: #14394e;
   --glass: linear-gradient(145deg, #ffffffdf, #d7f5ffbd);
   --blue: #0674ca;
@@ -60,7 +60,7 @@ button,
   );
   box-shadow:
     inset 0 1px 2px #fff,
-    0 3px 8px #00508322;
+    0 3px 8px #00000022;
   padding: 10px 18px;
   font-weight: 700;
   transition: transform .2s, box-shadow .2s;
@@ -70,7 +70,7 @@ button:hover,
 .pill:hover {
   box-shadow:
     inset 0 1px 2px #fff,
-    0 5px 16px #008fdf44;
+    0 5px 16px #00000024;
   transform: translateY(-2px);
 }
 
@@ -124,7 +124,7 @@ button:active {
   background: linear-gradient(#ffffffdc, #daf4ffb3);
   border-bottom: 1px solid #fff9;
   backdrop-filter: blur(20px);
-  box-shadow: 0 2px 12px #03497822;
+  box-shadow: 0 2px 12px #00000022;
   font-size: 12px;
 }
 
@@ -206,7 +206,7 @@ button:active {
   font-size: 11px;
   font-weight: 700;
   color: #2d5b1b;
-  box-shadow: 0 2px 12px #2b570d15;
+  box-shadow: 0 2px 12px #00000015;
 }
 
 .status i {
@@ -214,7 +214,7 @@ button:active {
   height: 7px;
   border-radius: 50%;
   background: #56b722;
-  box-shadow: 0 0 6px #6ccd47;
+  box-shadow: none;
 }
 
 .eyebrow {
@@ -238,9 +238,7 @@ h1 {
   letter-spacing: -.045em;
   line-height: 1.02;
   color: #fff;
-  text-shadow:
-    0 2px 1px #0c7cb399,
-    0 5px 25px #005a8c66;
+  text-shadow: none;
 }
 
 h1 span {
@@ -289,7 +287,7 @@ h1 span {
   border: 1px solid #ffffffad;
   padding: 18px;
   box-shadow:
-    0 16px 40px #035a8d26,
+    0 16px 40px #00000026,
     inset 0 1px 0 #fff;
   backdrop-filter: blur(18px);
 }
@@ -339,7 +337,7 @@ h1 span {
 .app-button:hover {
   background: #ffffff85;
   border-color: #fff;
-  box-shadow: 0 8px 18px #004b7822;
+  box-shadow: 0 8px 18px #00000022;
   transform: translateY(-5px);
 }
 
@@ -367,7 +365,7 @@ h1 span {
   background-size: 400% 200%;
   background-position: var(--x) var(--y);
   border-radius: 20px;
-  box-shadow: 0 6px 12px #075a8e25;
+  box-shadow: 0 6px 12px #00000025;
   transition: transform .25s;
 }
 
@@ -411,7 +409,7 @@ h1 span {
   background: linear-gradient(#ffffffbd, #a6d9edb0);
   backdrop-filter: blur(22px);
   box-shadow:
-    0 8px 25px #00507c40,
+    0 8px 25px #00000040,
     inset 0 1px 0 white;
 }
 
@@ -455,8 +453,8 @@ h1 span {
   border: 1px solid #fffffff0;
   border-radius: 19px;
   box-shadow:
-    0 24px 80px #002f5c55,
-    0 2px 8px #00446822;
+    0 24px 80px #00000055,
+    0 2px 8px #00000022;
   background: #effaff;
   overflow: hidden;
   display: flex;
@@ -472,7 +470,7 @@ h1 span {
 
 .window.focused {
   box-shadow:
-    0 25px 85px #002b5c66,
+    0 25px 85px #00000066,
     0 0 0 1px #8ddcff;
 }
 
@@ -576,7 +574,7 @@ h1 span {
   border-radius: 18px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 5px 15px #16496810;
+  box-shadow: 0 5px 15px #00000010;
   border: 1px solid #cee3ee;
   display: flex;
   flex-direction: column;
@@ -584,7 +582,7 @@ h1 span {
 }
 
 .file-card:hover {
-  box-shadow: 0 10px 24px #0077c02b;
+  box-shadow: 0 10px 24px #0000002b;
   transform: translateY(-4px);
 }
 

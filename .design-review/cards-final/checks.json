@@ -1,0 +1,253 @@
+[
+  {
+    "width": 1440,
+    "overflow": false,
+    "photos": [
+      "images/jp10.jpg",
+      "images/jp7.jpeg",
+      "images/jp16.jpg"
+    ],
+    "styles": true
+  },
+  {
+    "selected": "TechMeKid",
+    "selectedTab": "TechMeKid"
+  },
+  {
+    "width": 1440,
+    "photoWithinCanvas": true,
+    "opacity": [
+      "0.958222",
+      "0.041778",
+      "0"
+    ],
+    "scroll": 2526
+  },
+  {
+    "width": 1440,
+    "photoWithinCanvas": true,
+    "opacity": [
+      "0",
+      "0.950878",
+      "0.049122"
+    ],
+    "scroll": 2811
+  },
+  {
+    "width": 1440,
+    "photoWithinCanvas": true,
+    "opacity": [
+      "0",
+      "0",
+      "1"
+    ],
+    "scroll": 3096
+  },
+  {
+    "paused": true,
+    "canvas": [
+      [
+        800,
+        450
+      ],
+      [
+        800,
+        600
+      ]
+    ],
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "title": "DriveDrop",
+    "dates": "June 2026 – August 2026",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/1785944671093.jpeg"
+    ]
+  },
+  {
+    "width": 1440,
+    "title": "NeuralSeek",
+    "dates": "July 2025 – September 2025",
+    "pills": 1,
+    "overflow": false,
+    "media": [
+      "images/neuralseek_Image.jpeg"
+    ]
+  },
+  {
+    "width": 1440,
+    "title": "TechMeKid",
+    "dates": "June 2025 – July 2025",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/TMKIntern.jpeg"
+    ]
+  },
+  {
+    "width": 1440,
+    "title": "CodeGana",
+    "dates": "August 2025 – Present",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/codeganaLogoWide.png",
+      "images/CGmascotLeft!.png"
+    ]
+  },
+  {
+    "width": 1440,
+    "title": "FLINT Autonomous Vehicle",
+    "dates": "August 2025 – Present",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/FLiNTWin.jpeg"
+    ]
+  },
+  {
+    "width": 1440,
+    "title": "Verses & Vibes",
+    "dates": "June 2025 – January 2026",
+    "pills": 0,
+    "overflow": false,
+    "media": [
+      "images/bookBanner.png"
+    ]
+  },
+  {
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "photos": [
+      "images/jp5.jpg",
+      "images/jp13.jpg",
+      "images/jp7.jpeg"
+    ],
+    "styles": true
+  },
+  {
+    "selected": "TechMeKid",
+    "selectedTab": "TechMeKid"
+  },
+  {
+    "width": 390,
+    "photoWithinCanvas": true,
+    "opacity": [
+      "0.071428",
+      "0.928572",
+      "0"
+    ],
+    "scroll": 3639
+  },
+  {
+    "width": 390,
+    "photoWithinCanvas": true,
+    "opacity": [
+      "0",
+      "0.071428",
+      "0.928572"
+    ],
+    "scroll": 3849
+  },
+  {
+    "width": 390,
+    "photoWithinCanvas": true,
+    "opacity": [
+      "0",
+      "0",
+      "1"
+    ],
+    "scroll": 4059
+  },
+  {
+    "paused": true,
+    "canvas": [
+      [
+        800,
+        450
+      ],
+      [
+        800,
+        600
+      ]
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "title": "DriveDrop",
+    "dates": "June 2026 – August 2026",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/1785944671093.jpeg"
+    ]
+  },
+  {
+    "width": 390,
+    "title": "NeuralSeek",
+    "dates": "July 2025 – September 2025",
+    "pills": 1,
+    "overflow": false,
+    "media": [
+      "images/neuralseek_Image.jpeg"
+    ]
+  },
+  {
+    "width": 390,
+    "title": "TechMeKid",
+    "dates": "June 2025 – July 2025",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/TMKIntern.jpeg"
+    ]
+  },
+  {
+    "width": 390,
+    "title": "CodeGana",
+    "dates": "August 2025 – Present",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/codeganaLogoWide.png",
+      "images/CGmascotLeft!.png"
+    ]
+  },
+  {
+    "width": 390,
+    "title": "FLINT Autonomous Vehicle",
+    "dates": "August 2025 – Present",
+    "pills": 4,
+    "overflow": false,
+    "media": [
+      "images/FLiNTWin.jpeg"
+    ]
+  },
+  {
+    "width": 390,
+    "title": "Verses & Vibes",
+    "dates": "June 2025 – January 2026",
+    "pills": 0,
+    "overflow": false,
+    "media": [
+      "images/bookBanner.png"
+    ]
+  },
+  {
+    "width": 390,
+    "errors": []
+  },
+  {
+    "reduced": true,
+    "photosVisible": true,
+    "gifPaused": true
+  }
+]
